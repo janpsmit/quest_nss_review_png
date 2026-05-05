@@ -3,7 +3,7 @@
     {
       "name": "part2_subject_areas",
       "title": "Part 2 – Main statistical subject-matter domains",
-      "description": "Please answer the following questions for each statistical domain.",
+      "description": "Please answer the following questions for each statistical domain. Concise but informative responses are sufficient. If a domain is not applicable, please briefly explain why.",
       "elements": [
         {
           "type": "panelDynamic",
@@ -13,13 +13,12 @@
           "panelCount": 11,
           "minPanelCount": 11,
           "maxPanelCount": 11,
+          "panelsState": "collapsed",
+          "templateTitle": "{panel.domain}",
+          "allowAddPanel": false,
+          "allowRemovePanel": false,
+          "allowMovePanel": false,
           "templateElements": [
-            {
-              "type": "expression",
-              "name": "domain_title",
-              "title": "Statistical domain",
-              "expression": "{panel.domain}"
-            },
             {
               "type": "comment",
               "name": "developments",
