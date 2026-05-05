@@ -1,0 +1,71 @@
+{
+  "pages": [
+    {
+      "name": "part2_subject_areas",
+      "title": "Part 2 – Main statistical subject-matter domains",
+      "description": "Please answer the following questions for each statistical domain.",
+      "elements": [
+        {
+          "type": "panelDynamic",
+          "name": "subject_areas",
+          "title": "Statistical domains",
+          "renderMode": "list",
+          "panelCount": 11,
+          "minPanelCount": 11,
+          "maxPanelCount": 11,
+          "templateElements": [
+            {
+              "type": "expression",
+              "name": "domain_title",
+              "title": "Statistical domain",
+              "expression": "{panel.domain}"
+            },
+            {
+              "type": "comment",
+              "name": "developments",
+              "title": "What are the main developments in this statistical domain since the last Global Assessment?"
+            },
+            {
+              "type": "comment",
+              "name": "standards",
+              "title": "Which international standards are used (including version number where appropriate)?"
+            },
+            {
+              "type": "comment",
+              "name": "data_sources",
+              "title": "What data sources / registers are used?"
+            },
+            {
+              "type": "comment",
+              "name": "challenges",
+              "title": "What are the main challenges currently?"
+            },
+            {
+              "type": "comment",
+              "name": "future_plans",
+              "title": "What are your plans for future developments?"
+            },
+            {
+              "type": "comment",
+              "name": "support_needed",
+              "title": "What support do you need from international organisations?"
+            }
+          ],
+          "defaultValue": [
+            { "domain": "National accounts" },
+            { "domain": "Balance of Payments, Foreign Trade & FDI" },
+            { "domain": "Price statistics" },
+            { "domain": "Business statistics" },
+            { "domain": "Population Census and Population Statistics" },
+            { "domain": "Labour market statistics" },
+            { "domain": "Other household statistics" },
+            { "domain": "Statistics of the Sustainable Development Goals (SDGs)" },
+            { "domain": "Trade statistics" },
+            { "domain": "Energy statistics" },
+            { "domain": "Transport statistics" }
+          ]
+        }
+      ]
+    }
+  ]
+}

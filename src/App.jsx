@@ -2,12 +2,15 @@ import { Survey } from "survey-react-ui";
 import { Model } from "survey-core";
 import "./styles/survey.css";
 import legalFramework from "./survey/part1_legal_framework.json";
+import subjectAreas from "./survey/part2_subject_areas.json";
+
 
 export default function App() {
   const survey = new Model({
     title: "Global Assessment – Self-Assessment Questionnaire",
     pages: [
-      ...legalFramework.pages
+      ...legalFramework.pages,
+      ...subjectAreas.pages
     ]
   });
 
