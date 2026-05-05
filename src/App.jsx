@@ -1,17 +1,18 @@
 import { Survey } from "survey-react-ui";
 import { Model } from "survey-core";
-import "./styles/survey.css";   // or modern.css / default.css
+import "./styles/survey.css";
+import legalFramework from "./survey/part1_legal_framework.json";
 
 export default function App() {
   const survey = new Model({
-    title: "SurveyJS sanity check",
-    elements: [
-      {
-        type: "comment",
-        name: "test",
-        title: "If you can see this styled textarea, everything works."
-      }
+    title: "Global Assessment – Self-Assessment Questionnaire",
+    pages: [
+      ...legalFramework.pages
     ]
+  });
+
+  survey.onComplete.add((sender) => {
+    console.log("Survey results:", sender.data);
   });
 
   return (
