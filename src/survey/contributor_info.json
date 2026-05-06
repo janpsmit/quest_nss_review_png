@@ -1,0 +1,54 @@
+{
+  "pages": [
+    {
+      "name": "contributor_information",
+      "title": "Contributor Information",
+      "description": "Please provide basic information about yourself and your institution. This helps us understand the source of responses and follow up if needed.",
+      "elements": [
+        {
+          "type": "text",
+          "name": "contributor_name",
+          "title": "Name",
+          "isRequired": true
+        },
+        {
+          "type": "text",
+          "name": "contributor_organisation",
+          "title": "Organisation / Department",
+          "isRequired": true
+        },
+        {
+          "type": "text",
+          "name": "contributor_position",
+          "title": "Position / Role (optional)"
+        },
+        {
+          "type": "text",
+          "name": "contributor_email",
+          "title": "Email address (optional)",
+          "inputType": "email"
+        },
+        {
+          "type": "checkbox",
+          "name": "contribution_areas",
+          "title": "Which parts of the questionnaire are you contributing to? (optional)",
+          "choices": [
+            "Part 1 – Institutional issues",
+            "Part 2 – Statistical domains",
+            "Part 3 – Supporting documents"
+          ]
+        },
+        {
+          "type": "comment",
+          "name": "contribution_notes",
+          "title": "If relevant, please briefly indicate which specific topics or sections you are contributing to (optional)"
+        },
+        {
+          "type": "html",
+          "name": "collaboration_note",
+          "html": "<p><em>This questionnaire may be completed collaboratively by multiple contributors. If you are responsible for only part of the questionnaire, you may complete only the relevant sections.</em></p>"
+        }
+      ]
+    }
+  ]
+}
