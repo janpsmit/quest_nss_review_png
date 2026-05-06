@@ -1,10 +1,24 @@
 export default function ConsolidatedReviewView({ data }) {
-
   const renderText = (value) => {
     if (!value || !value.toString().trim()) {
       return "—";
     }
     return value;
+  };
+
+  // ---- Differences checker (optional) ----
+  const hasDifferences = (responses, field = "value") => {
+    if (!responses || responses.length <= 1) {
+      return false;
+    }
+
+    const values = responses
+      .map((r) => (r[field] || "").trim().toLowerCase())
+      .filter((v) => v.length > 0);
+
+    const uniqueValues = new Set(values);
+
+    return uniqueValues.size > 1;
   };
 
   // ---- Part 1 renderer ----
@@ -13,16 +27,27 @@ export default function ConsolidatedReviewView({ data }) {
       return <p>—</p>;
     }
 
-    return responses.map((r, idx) => (
-      <div key={idx} style={{ marginBottom: "12px" }}>
-        <p style={{ margin: 0 }}>
-          <strong>{r.contributor}</strong>
-        </p>
-        <p style={{ marginTop: "4px" }}>
-          {renderText(r.value)}
-        </p>
+    const different = hasDifferences(responses);
+
+    return (
+      <div
+        style={{
+          padding: different ? "10px" : "0",
+          backgroundColor: different ? "#fff3cd" : "transparent",
+          borderLeft: different ? "4px solid #ffc107" : "none",
+          marginBottom: "12px",
+        }}
+      >
+        {responses.map((r, idx) => (
+          <div key={idx} style={{ marginBottom: "12px" }}>
+            <p style={{ margin: 0 }}>
+              <strong>{r.contributor}</strong>
+            </p>
+            <p style={{ marginTop: "4px" }}>{renderText(r.value)}</p>
+          </div>
+        ))}
       </div>
-    ));
+    );
   };
 
   // ---- Part 2 renderer ----
@@ -31,24 +56,48 @@ export default function ConsolidatedReviewView({ data }) {
       return <p>—</p>;
     }
 
-    return responses.map((r, idx) => (
-      <div key={idx} style={{ marginBottom: "12px" }}>
-        <p style={{ margin: 0 }}>
-          <strong>{r.contributor}</strong>
-        </p>
-        <p style={{ marginTop: "4px" }}>
-          {renderText(r[field])}
-        </p>
+    const different = hasDifferences(responses, field);
+
+    return (
+      <div
+        style={{
+          padding: different ? "10px" : "0",
+          backgroundColor: different ? "#fff3cd" : "transparent",
+          borderLeft: different ? "4px solid #ffc107" : "none",
+          marginBottom: "12px",
+        }}
+      >
+        {responses.map((r, idx) => (
+          <div key={idx} style={{ marginBottom: "12px" }}>
+            <p style={{ margin: 0 }}>
+              <strong>{r.contributor}</strong>
+            </p>
+            <p style={{ marginTop: "4px" }}>{renderText(r[field])}</p>
+          </div>
+        ))}
       </div>
-    ));
+    );
   };
 
   return (
     <div style={{ maxWidth: "900px", margin: "40px auto", lineHeight: "1.6" }}>
-
       {/* Header */}
       <h1>Global Assessment – Consolidated Review</h1>
       <h2>Papua New Guinea</h2>
+
+      <div
+        style={{
+          backgroundColor: "#eef6ff",
+          padding: "10px",
+          borderLeft: "4px solid #339af0",
+          marginTop: "10px",
+        }}
+      >
+        <em>
+          Highlighted sections indicate differing responses between
+          contributors.
+        </em>
+      </div>
 
       <hr />
 
@@ -157,10 +206,11 @@ export default function ConsolidatedReviewView({ data }) {
 
       {/* Raw JSON (optional for debugging) */}
       <h2>Raw merged data</h2>
-      <pre style={{ background: "#f6f6f6", padding: "12px", overflowX: "auto" }}>
+      <pre
+        style={{ background: "#f6f6f6", padding: "12px", overflowX: "auto" }}
+      >
         {JSON.stringify(data, null, 2)}
       </pre>
-
     </div>
   );
 }

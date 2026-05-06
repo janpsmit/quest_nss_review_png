@@ -8,6 +8,8 @@ import contributorInfo from "./survey/contributor_info.json";
 import legalFramework from "./survey/part1_legal_framework.json";
 import subjectAreas from "./survey/part2_subject_areas.json";
 import part3Documents from "./survey/part3_supporting_documents.json";
+import consolidatedData from "./data/merged_output.json";
+import ConsolidatedReviewView from "./ConsolidatedReviewView";
 
 export default function App() {
   const [reviewData, setReviewData] = useState(null);
@@ -66,9 +68,5 @@ survey.onComplete.add((sender) => {
   console.log("Final survey results:", sender.data);
 });
 
-  return (
-    <div style={{ maxWidth: "900px", margin: "40px auto" }}>
-      <Survey model={survey} />
-    </div>
-  );
+  return <ConsolidatedReviewView data={consolidatedData} />;
 }
