@@ -1,5 +1,4 @@
-import { useState } from "react";
-import ReviewView from "./ReviewView";
+import { useEffect } from "react";
 import { Survey } from "survey-react-ui";
 import { Model } from "survey-core";
 import "./styles/survey.css";
@@ -8,11 +7,8 @@ import contributorInfo from "./survey/contributor_info.json";
 import legalFramework from "./survey/part1_legal_framework.json";
 import subjectAreas from "./survey/part2_subject_areas.json";
 import part3Documents from "./survey/part3_supporting_documents.json";
-import consolidatedData from "./data/merged_output.json";
-import ConsolidatedReviewView from "./ConsolidatedReviewView";
 
 export default function App() {
-  const [reviewData, setReviewData] = useState(null);
   const survey = new Model({
     title: "Global Assessment – Self-Assessment Questionnaire",
     pages: [
@@ -20,53 +16,99 @@ export default function App() {
       ...contributorInfo.pages,
       ...legalFramework.pages,
       ...subjectAreas.pages,
-      ...part3Documents.pages
-    ]
+      ...part3Documents.pages,
+    ],
   });
 
-survey.showTOC = true;
-survey.tocLocation = "left";
-survey.showProgressBar = "top";
-survey.progressBarType = "pages";
+  survey.showTOC = true;
+  survey.tocLocation = "left";
+  survey.showProgressBar = "top";
+  survey.progressBarType = "pages";
 
-const STORAGE_KEY = "nss_ga_survey_draft";
+  // ✅ Completion logic
+  const getDomainStatus = (domain) => {
+    if (!domain) return "empty";
 
-// Restore saved data (if any)
-const savedState = localStorage.getItem(STORAGE_KEY);
-if (savedState) {
-  const parsed = JSON.parse(savedState);
-  survey.data = parsed.data || {};
-  survey.currentPageNo = parsed.currentPageNo || 0;
-}
+    const fields = [
+      domain.developments,
+      domain.standards,
+      domain.data_sources,
+      domain.challenges,
+      domain.future_plans,
+      domain.support_needed,
+    ];
 
-// Auto-save on every change
-survey.onValueChanged.add(() => {
-  localStorage.setItem(
-    STORAGE_KEY,
-    JSON.stringify({
-      data: survey.data,
-      currentPageNo: survey.currentPageNo
-    })
+    const filled = fields.filter((f) => f && f.toString().trim() !== "");
+
+    if (filled.length === 0) return "empty";
+    if (filled.length < 3) return "started";
+    return "filled";
+  };
+
+  // ✅ Load shared data
+  useEffect(() => {
+    fetch("http://localhost:3001/load")
+      .then((res) => res.json())
+      .then((data) => {
+        survey.data = data || {};
+
+        // initialise status
+        const areas = survey.getValue("subject_areas");
+
+        if (Array.isArray(areas)) {
+          const updated = areas.map((d) => ({
+            ...d,
+            _status: getDomainStatus(d),
+          }));
+
+          survey.setValue("subject_areas", updated);
+        }
+      })
+      .catch((err) => {
+        console.error("Error loading data:", err);
+      });
+  }, []);
+
+  // ✅ Save + update status
+  survey.onValueChanged.add((sender, options) => {
+    // save to server
+    fetch("http://localhost:3001/save", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        [options.name]: options.value,
+      }),
+    });
+
+    // update status
+    const areas = sender.getValue("subject_areas");
+
+    if (!Array.isArray(areas)) return;
+
+    const updated = areas.map((d) => {
+      const status = getDomainStatus(d);
+
+      let label = "";
+      if (status === "empty") label = "empty";
+      else if (status === "started") label = "in progress";
+      else label = "completed";
+
+      return {
+        ...d,
+        _status: label,
+      };
+    });
+
+    if (JSON.stringify(areas) !== JSON.stringify(updated)) {
+      sender.setValue("subject_areas", updated);
+    }
+  });
+
+  return (
+    <div style={{ maxWidth: "900px", margin: "40px auto" }}>
+      <Survey model={survey} />
+    </div>
   );
-});
-  
-survey.onCurrentPageChanged.add(() => {
-  localStorage.setItem(
-    STORAGE_KEY,
-    JSON.stringify({
-      data: survey.data,
-      currentPageNo: survey.currentPageNo
-    })
-  );
-});
-
-survey.onComplete.add((sender) => {
-  // Clear saved draft so the survey doesn't reopen as completed
-  localStorage.removeItem(STORAGE_KEY);
-
-  // Final results (for now just log them)
-  console.log("Final survey results:", sender.data);
-});
-
-  return <ConsolidatedReviewView data={consolidatedData} />;
 }
