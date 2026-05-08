@@ -3,12 +3,12 @@
     {
       "name": "part3_supporting_documents",
       "title": "Part 3 – Supporting documents",
-      "description": "Please provide the latest versions of the following documents if they exist. Links to documents on the Internet are preferred. If this is not possible, please upload a copy. Documents in English are preferred where available.",
+      "description": "Please provide the latest versions of the following documents if they exist. Links to documents on the Internet are preferred. If this is not possible, please upload a copy.",
       "elements": [
         {
           "type": "panel",
-          "name": "law_statistics",
-          "title": "Law on Official Statistics and related legislation",
+          "name": "statistics_related_legislation",
+          "title": "Legislation related to official statistics apart from the Stastical Services Act (e.g. data protection, confidentiality, access to information, etc.)",
           "elements": [
             {
               "type": "text",

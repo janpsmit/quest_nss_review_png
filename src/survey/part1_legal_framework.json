@@ -2,8 +2,8 @@
   "pages": [
     {
       "name": "legal_framework_professional_independence",
-      "title": "Legal framework and professional independence",
-      "description": "ESCoP 1 and 6 / UNFPOS 1 and 2",
+      "title": "Part 1 - Legal framework and professional independence",
+      "description": "Please answer the following questions about the legal framework for official statistics in your country, and the professional independence of the national statistical authorities. Concise but informative responses are sufficient. If an issue is not applicable, please briefly explain why.",
       "elements": [
         {
           "type": "panel",
@@ -12,9 +12,14 @@
           "elements": [
             {
               "type": "comment",
+              "name": "ssa",
+              "title": "The Statistical Services Act dates back to 1980. Which are main issues any revision of the act in your view should address?",
+              "isRequired": false
+            },
+            { "type": "comment",
               "name": "legislation_overview",
-              "title": "Please list and briefly describe the main pieces of legislation relevant for official statistics in your country.",
-              "isRequired": true
+              "title": "Please list and briefly describe any ohter main pieces of legislation relevant for official statistics in the country, eg., as related to censues, civil registration, the civil service, data protection, etc.",
+              "isRequired": false
             }
           ]
         },
@@ -26,7 +31,7 @@
             {
               "type": "comment",
               "name": "independence_appointment_dismissal",
-              "title": "How is professional independence ensured by national statistical legislation, and in practice, with regard to the appointment and dismissal procedures of top management, and freedom from any interference?"
+              "title": "How is professional independence ensured by national statistical legislation and in practice with regard to the appointment and dismissal procedures of top management, and freedom from any interference?"
             },
             {
               "type": "comment",
@@ -37,28 +42,16 @@
               "type": "comment",
               "name": "budget_autonomy",
               "title": "To what extent do the national statistical authorities have autonomy in the allocation of the budget for the production and dissemination of official statistics?"
-            }
-          ]
-        },
-        {
-          "type": "panel",
-          "name": "assessment_reflection",
-          "title": "Assessment and future development",
-          "elements": [
-            {
-              "type": "comment",
-              "name": "changes_since_last_ga",
-              "title": "What has changed since the last Global Assessment?"
             },
             {
               "type": "comment",
               "name": "areas_for_improvement",
-              "title": "What do you think needs to be improved in this area?"
+              "title": "What do you think needs to be improved in the area of professional independence?"
             },
             {
               "type": "comment",
               "name": "support_needed",
-              "title": "What support do you need from international organisations?"
+              "title": "What support do you need from international organizations in the area of professional independence?"
             }
           ]
         }

@@ -6,17 +6,17 @@ import intro from "./survey/intro_guidance.json";
 import contributorInfo from "./survey/contributor_info.json";
 import legalFramework from "./survey/part1_legal_framework.json";
 import subjectAreas from "./survey/part2_subject_areas.json";
-import part3Documents from "./survey/part3_supporting_documents.json";
+import documents from "./survey/part3_supporting_documents.json";
 
 export default function App() {
   const survey = new Model({
-    title: "Global Assessment – Self-Assessment Questionnaire",
+    title: "Review of the national statistical system of Papua New Guinea – Self-assessment questionnaire",
     pages: [
       ...intro.pages,
       ...contributorInfo.pages,
       ...legalFramework.pages,
       ...subjectAreas.pages,
-      ...part3Documents.pages,
+      ...documents.pages,
     ],
   });
 

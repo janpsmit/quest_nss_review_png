@@ -2,23 +2,23 @@
   "pages": [
     {
       "name": "introduction",
-      "title": "Self-Assessment Questionnaire – Introduction",
-      "description": "Global Assessment of the National Statistical System",
+      "title": "Introduction",
+      "description": "Review of the national statistical system",
       "elements": [
         {
           "type": "html",
           "name": "intro_text",
-          "html": "<p>You are invited to complete this self-assessment questionnaire as the first step in the Global Assessment of your country’s National Statistical System (NSS).</p><p>Your responses will help the international assessment team to better understand the strengths and challenges of the NSS and to identify areas for more in-depth discussion during the expert mission.</p>"
+          "html": "<p>You are invited to complete this self-assessment questionnaire as the first step in the review of your country’s national statistical system.</p><p>Your responses will help the review team to understand the strengths and challenges of the system and to identify areas for more in-depth discussion during the review mission.</p>"
         },
         {
           "type": "html",
           "name": "scope_text",
-          "html": "<h4>Scope of the questionnaire</h4><p>Please answer the questions from the perspective of the <strong>National Statistical System (NSS)</strong> as a whole. This includes the national statistical office and all other producers of official statistics.</p>"
+          "html": "<h4>Scope of the questionnaire</h4><p>Please answer the questions from the perspective of the <strong>national statistical system</strong> as a whole. This includes the national statistical office and all other producers of official statistics.</p>"
         },
         {
           "type": "html",
           "name": "structure_text",
-          "html": "<h4>Structure</h4><ul><li><strong>Part 1 – Institutional issues</strong>: legal framework, independence, coordination, resources, quality, confidentiality, and related topics.</li><li><strong>Part 2 – Main statistical subject-matter domains</strong>: assessment of key statistical areas such as national accounts, price statistics, population statistics, and others.</li><li><strong>Part 3 – Supporting documents</strong>: links or uploads of relevant laws, strategies, policies, and other background material.</li></ul>"
+          "html": "<h4>Structure</h4><ul><li><strong>Part 1 – Institutional issues</strong>: legal framework, independence, coordination, resources, quality, confidentiality, and related topics.</li><li><strong>Part 2 – Main statistical subject-matter domains</strong>: assessment of key statistical activities.</li><li><strong>Part 3 – Supporting documents</strong>: Links to or uploads of relevant laws, strategies, policies, and other background material.</li></ul>"
         },
         {
           "type": "html",
@@ -28,7 +28,7 @@
         {
           "type": "html",
           "name": "documents_text",
-          "html": "<h4>Supporting documents</h4><p>In Part 3, links to documents available online are preferred. If this is not possible, you may upload document files. Documents in English are preferred where available.</p>"
+          "html": "<h4>Supporting documents</h4><p>In Part 3, links to documents available online are preferred. If this is not possible, you may upload document files.</p>"
         }
       ]
     }
