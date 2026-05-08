@@ -6,17 +6,18 @@ import intro from "./survey/intro_guidance.json";
 import contributorInfo from "./survey/contributor_info.json";
 import legalFramework from "./survey/part1_legal_framework.json";
 import subjectAreas from "./survey/part2_subject_areas.json";
-import documents from "./survey/part3_supporting_documents.json";
+import supportDocuments from "./survey/part3_supporting_documents.json";
 
 export default function App() {
   const survey = new Model({
-    title: "Review of the national statistical system of Papua New Guinea – Self-assessment questionnaire",
+    title:
+      "Review of the national statistical system of Papua New Guinea – Self-assessment questionnaire",
     pages: [
       ...intro.pages,
       ...contributorInfo.pages,
       ...legalFramework.pages,
       ...subjectAreas.pages,
-      ...documents.pages,
+      ...supportDocuments.pages,
     ],
   });
 
@@ -91,10 +92,9 @@ export default function App() {
       const status = getDomainStatus(d);
 
       let label = "";
-      if (status === "empty") label = "empty";
-      else if (status === "started") label = "in progress";
-      else label = "completed";
-
+      if (status === "empty") label = "⭕ empty";
+      else if (status === "started") label = "🟡 in progress";
+      else label = "✅ completed";
       return {
         ...d,
         _status: label,

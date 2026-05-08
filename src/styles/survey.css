@@ -9737,3 +9737,39 @@ body {
 .sv-components-container-left {
   width: fit-content;
 }
+
+/* ✅ UN blue primary colour override */
+
+:root {
+  --sjs-primary-backcolor: #5B92E5;
+  --sjs-primary-hovercolor: #4a7fd1;
+  --sjs-primary-forecolor: #ffffff;
+}
+
+/* Buttons */
+.sjs-button {
+  background-color: #5B92E5 !important;
+  border-color: #5B92E5 !important;
+}
+
+/* Progress bar */
+.sjs-progress__bar {
+  background-color: #5B92E5 !important;
+}
+
+/* Selected items (radio / checkbox) */
+.sjs-item--checked .sjs-item__decorator {
+  background-color: #5B92E5 !important;
+  border-color: #5B92E5 !important;
+}
+
+/* Panel headers (optional subtle tint) */
+.sjs-panel__title {
+  color: #5B92E5;
+}
+
+/* TOC active item */
+.sjs-toc__item--selected {
+  color: #5B92E5;
+  font-weight: 600;
+}
