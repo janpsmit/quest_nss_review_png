@@ -5,8 +5,10 @@ import "./styles/survey.css";
 import intro from "./survey/intro_guidance.json";
 import contributorInfo from "./survey/contributor_info.json";
 import legalFramework from "./survey/part1_legal_framework.json";
-import subjectAreas from "./survey/part2_subject_areas.json";
-import supportDocuments from "./survey/part3_supporting_documents.json";
+import nationalStatisticalSystem from "./survey/part2_national_statistical_system.json";
+import nationalStatisticalOffice from "./survey/part3_national_statistical_office.json";
+import subjectAreas from "./survey/part4_subject_areas.json";
+import supportDocuments from "./survey/part9_supporting_documents.json";
 
 export default function App() {
   const survey = new Model({
@@ -16,6 +18,7 @@ export default function App() {
       ...intro.pages,
       ...contributorInfo.pages,
       ...legalFramework.pages,
+      ...nationalStatisticalSystem.pages,
       ...subjectAreas.pages,
       ...supportDocuments.pages,
     ],

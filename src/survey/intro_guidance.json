@@ -13,12 +13,12 @@
         {
           "type": "html",
           "name": "scope_text",
-          "html": "<h4>Scope of the questionnaire</h4><p>Please answer the questions from the perspective of the <strong>national statistical system</strong> as a whole. This includes the national statistical office and all other producers of official statistics.</p>"
+          "html": "<h4>Scope of the questionnaire</h4><p>Please answer the questions, apart from those under part 3, from the perspective of the <strong>national statistical system</strong> as a whole. This includes the national statistical office and all other producers of official statistics.</p>"
         },
         {
           "type": "html",
           "name": "structure_text",
-          "html": "<h4>Structure</h4><ul><li><strong>Part 1 – Institutional issues</strong>: legal framework, independence, coordination, resources, quality, confidentiality, and related topics.</li><li><strong>Part 2 – Main statistical subject-matter domains</strong>: assessment of key statistical activities.</li><li><strong>Part 3 – Supporting documents</strong>: Links to or uploads of relevant laws, strategies, policies, and other background material.</li></ul>"
+          "html": "<h4>Structure</h4><ul><li><strong>Part 1 – Institutional issues</strong>: legal framework, independence, coordination, resources, quality, confidentiality, and related topics.</li><li><strong>Part 2 – National statistical system</strong>: assessment of the structure and functioning of the national statistical system.</li><li><strong>Part 3 – Main statistical subject-matter domains</strong>: assessment of key statistical activities.</li><li><strong>Part 9 – Supporting documents</strong>: Links to or uploads of relevant laws, strategies, policies, and other background material.</li></ul>"
         },
         {
           "type": "html",
@@ -28,7 +28,7 @@
         {
           "type": "html",
           "name": "documents_text",
-          "html": "<h4>Supporting documents</h4><p>In Part 3, links to documents available online are preferred. If this is not possible, you may upload document files.</p>"
+          "html": "<h4>Supporting documents</h4><p>In Part 9, links to documents available online are preferred. If this is not possible, you may email document files to smit1@un.org.</p>"
         }
       ]
     }

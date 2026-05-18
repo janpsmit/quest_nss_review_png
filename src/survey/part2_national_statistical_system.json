@@ -1,0 +1,64 @@
+{
+  "pages": [
+    {
+      "name": "national_statistical_system",
+      "title": "Part 2 - National statistical system",
+      "description": "Please answer the following questions about the national statistical system in your country. Concise but informative responses are sufficient. If an issue is not applicable, please briefly explain why.",
+      "elements": [
+        {
+          "type": "panel",
+          "name": "members",
+          "title": "Members",
+          "elements": [
+            {
+              "type": "comment",
+              "name": "members_q1",
+              "title": "Which State agencies, apart from the National Statistical Office, are in practice considered producing official statistics in accordance with articles 2 and 17 of the Statistical Services Act 1980 and therewith practically members of the national statistical system?"
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "coordination",
+          "title": "Coordination",
+          "elements": [
+            {
+              "type": "comment",
+              "name": "coordination_q1",
+              "title": "How does the National Statistical Office in practice exert its power to coordinate the national statistical system in accordance with article 4 of the Statistical Services Act 1980?"
+            },
+            {
+              "type": "comment",
+              "name": "coordination_q2",
+              "title": "What mechanism(s) is/are in place to ensure the coordination of the production and dissemination of official statistics across the national statistical system, including with respect to mutli-year and/or annual programming, the use of common standards and practices, and the sharing of resources and expertise?"
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "access",
+          "title": "Access to administrative data",
+          "elements": [
+            {
+              "type": "comment",
+              "name": "access_q1",
+              "title": "How does the National Statistical Office in practice ensure access to administrative data in accordance with article 5 of the Statistical Services Act 1980?"
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "consultation",
+          "title": "User consultation",
+          "elements": [
+            {
+              "type": "comment",
+              "name": "consultation_q1",
+              "title": "What mechanism(s) is/are in place to ensure that the official statistics produced throughout the national statistical system continuously meet the evolving needs of all possible users, including State agencies, the public, businesses, researchers and the media?"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

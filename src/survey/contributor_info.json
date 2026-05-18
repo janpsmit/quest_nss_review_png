@@ -34,8 +34,9 @@
           "title": "Which parts of the questionnaire are you contributing to? (optional)",
           "choices": [
             "Part 1 – Legal framework and professional independence",
+            "Part 2 - National statistical system",
             "Part 2 – Statistical domains",
-            "Part 3 – Supporting documents"
+            "Part 9 – Supporting documents"
           ]
         },
         {
