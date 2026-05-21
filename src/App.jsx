@@ -8,7 +8,7 @@ import legalFramework from "./survey/part1_legal_framework.json";
 import nationalStatisticalSystem from "./survey/part2_national_statistical_system.json";
 import nationalStatisticalOffice from "./survey/part3_national_statistical_office.json";
 import subjectAreas from "./survey/part4_subject_areas.json";
-import supportDocuments from "./survey/part9_supporting_documents.json";
+import supportDocuments from "./survey/part5_supporting_documents.json";
 
 export default function App() {
   const survey = new Model({
@@ -19,10 +19,14 @@ export default function App() {
       ...contributorInfo.pages,
       ...legalFramework.pages,
       ...nationalStatisticalSystem.pages,
+      ...nationalStatisticalOffice.pages,
       ...subjectAreas.pages,
       ...supportDocuments.pages,
     ],
   });
+
+// ✅ Enable HTML in titles (THIS IS THE FIX)
+survey.allowHtmlInTitles = true;
 
   survey.showTOC = true;
   survey.tocLocation = "left";

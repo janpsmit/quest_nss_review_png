@@ -9773,3 +9773,14 @@ body {
   color: #5B92E5;
   font-weight: 600;
 }
+/* Panel titles (works for both class versions) */
+.sd-html h4,
+.sjs-html h4 {
+  margin-top: 12px;
+  margin-bottom: 4px;
+  font-size: 14px;       /* ↓ smaller */
+  font-weight: 600;
+  color: #444;           /* ↓ less dominant than blue */
+}
+
+

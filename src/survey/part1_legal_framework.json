@@ -13,13 +13,12 @@
             {
               "type": "comment",
               "name": "ssa",
-              "title": "The Statistical Services Act dates back to 1980. Which are main issues any revision of the act in your view should address?",
-              "isRequired": false
+              "title": "The Statistical Services Act dates back to 1980. Which are main issues any revision of the act in your view should address?"
             },
+
             { "type": "comment",
               "name": "legislation_overview",
-              "title": "Please list and briefly describe any ohter main pieces of legislation relevant for official statistics in the country, eg., as related to censues, civil registration, the civil service, data protection, etc.",
-              "isRequired": false
+              "title": "Please list and briefly describe any other main pieces of legislation relevant for official statistics in the country, e.g., as related to censues, civil registration, the civil service, data protection, etc."
             }
           ]
         },
