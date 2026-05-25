@@ -8,7 +8,7 @@
         {
           "type": "html",
           "name": "intro_text",
-          "html": "<p>You are invited to complete this self-assessment questionnaire as the first step in the review of  national statistical system of Papua New Guinea.</p><p>Your responses will help the review team to understand the strengths and challenges of the system and to identify areas for more in-depth discussion during the review mission.</p>"
+          "html": "<p>You are invited to complete this self-assessment questionnaire as the first step in the review of the national statistical system of Papua New Guinea.</p><p>Your responses will help the review team to understand the strengths and challenges of the system and to identify areas for more in-depth discussion during the review mission.</p>"
         },
         {
           "type": "html",
@@ -18,7 +18,7 @@
         {
           "type": "html",
           "name": "structure_text",
-          "html": "<h4>Structure</h4><ul><li><strong>Part 1 – Institutional issues</strong>: legal framework and professional independence</li><li><strong>Part 2 – National statistical system</strong>: members, coordinations, access to administrative data and user consultation.</li><li><strong>Part 3 - National Statistical Office</strong>: organization, resources, dissemination, stakeholder, international cooperation, data sources and quality assurance.</li><li><strong>Part 4 – Main statistical subject-matter domains</strong>: assessment of key statistical activities.</li><li><strong>Part 5 – Supporting documents</strong>: Links to relevant laws, strategies, policies, and other background material.</li></ul>"
+          "html": "<h4>Structure</h4><ul><li><strong>Part 1 – Institutional issues</strong>: legal framework and professional independence.</li><li><strong>Part 2 – National statistical system</strong>: members, coordinations, access to administrative data and user consultation.</li><li><strong>Part 3 - National Statistical Office</strong>: organization, resources, dissemination, stakeholders, international cooperation, data sources and quality assurance.</li><li><strong>Part 4 – Main statistical subject-matter domains</strong>: assessment of key statistical activities.</li><li><strong>Part 5 – Supporting documents</strong>: Links to relevant laws, strategies, policies, and other background material.</li></ul>"
         },
         {
           "type": "html",
@@ -28,7 +28,7 @@
         {
           "type": "html",
           "name": "documents_text",
-          "html": "<h4>Supporting documents</h4><p>In Part 5, links to documents available online are preferred. If this is not possible, you may email document files to smit1@un.org.</p>"
+          "html": "<h4>Supporting documents</h4><p>In Part 5, links to documents available on websites are preferred. If this is not possible, you may create a Google Drive folder and share the link.</p>"
         }
       ]
     }

@@ -43,7 +43,7 @@
             {
               "type": "html",
               "name": "recruitment_label",
-              "html": "<strong>Recruitment</strong>"
+              "html": "<span class='sub-label'>Recruitment</span>"
             },
 
             {
@@ -55,7 +55,7 @@
             {
               "type": "html",
               "name": "retention_label",
-              "html": "<strong>Retention</strong>"
+              "html": "<span class='sub-label'>Retention</span>"
             },
 
             {
@@ -67,7 +67,7 @@
             {
               "type": "html",
               "name": "training_label",
-              "html": "<strong>Training and development</strong>"
+              "html": "<span class='sub-label'>Training and development</span>"
             },
 
             {
@@ -150,7 +150,7 @@
             {
               "type": "comment",
               "name": "quality_assurance_q1",
-              "title": "Please describe the quality assurance policy and instruments the National Statistical Office is using. This may include a quality assurance framework; using GSBPM (Generic Statistical Business Process Model) checklist and quality indicators for the design of statistical business processes; validation procedures at data capture; editing and imputation procedures at data processing; and producing, and possibly publishing, producer-oriented and user-oriented quality reports."
+              "title": "Please describe the quality assurance policy and instruments the National Statistical Office is using. This may include a quality assurance framework; using GSBPM (Generic Statistical Business Process Model) checklists and quality indicators for the design of statistical business processes; validation procedures at data capture; editing and imputation procedures at data processing; and producing, and possibly publishing, producer-oriented and user-oriented quality reports."
             }
           ]
         }

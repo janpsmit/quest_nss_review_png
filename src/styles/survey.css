@@ -9774,13 +9774,43 @@ body {
   font-weight: 600;
 }
 /* Panel titles (works for both class versions) */
-.sd-html h4,
-.sjs-html h4 {
-  margin-top: 12px;
-  margin-bottom: 4px;
-  font-size: 14px;       /* ↓ smaller */
-  font-weight: 600;
-  color: #444;           /* ↓ less dominant than blue */
+
+.sjs-panel__title,
+.sd-panel__title {
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  margin-top: 24px !important;
+  margin-bottom: 14px !important;
+  padding-bottom: 6px;
+  border-bottom: 2.5px solid #5B92E5;
 }
 
+.sd-html h4,
+.sjs-html h4 {
+  margin-top: 14px;
+  margin-bottom: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #5B92E5;              /* ✅ bring back UN blue */
+  border-bottom: 1px solid #5B92E5;  /* ✅ subtle underline */
+  padding-bottom: 3px;
+}
+
+.sub-label {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #333;
+}
+
+.sjs-question__title,
+.sd-question__title {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+.sjs-panel,
+.sd-panel {
+  margin-bottom: 28px;
+}
 

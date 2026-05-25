@@ -3,33 +3,32 @@
     {
       "name": "part5_supporting_documents",
       "title": "Part 5 – Supporting documents",
-      "description": "Please provide links to the latest versions of the following documents (website, SharePoint, OneDrive, Google Drive, etc.). If a document is not available online, please email it to smit1@un.org",
+      "description": "Please provide links to the latest versions of the following documents. For documents available on websites, please provide the URL. For documents not available on websites, please upload the document to Google Drive and provide the link. If a document is not available, please briefly explain why.",
       "elements": [
-      {
-      "type": "panelDynamic",
-      "name": "law_documents",
-      "title": "Relevant laws and other legal documents, apart from the Statistical Services Act 1980 (e.g., on data protection, access to information, confidentiality, etc.)",
-      "templateTitle": "Document {panelIndex}",
-      "panelAddText": "Add another document",
-      "panelRemoveText": "Remove",
-      "minPanelCount": 1,
-      "templateElements": [
         {
-          "type": "text",
-          "name": "description",
-          "title": "Description of the document",
-          "isRequired": false
+          "type": "panelDynamic",
+          "name": "law_documents",
+          "title": "Relevant laws and other legal documents, apart from the Statistical Services Act 1980 (e.g., on data protection, access to information, confidentiality, etc.)",
+          "templateTitle": "Document {panelIndex}",
+          "panelAddText": "Add another document",
+          "panelRemoveText": "Remove",
+          "minPanelCount": 1,
+          "templateElements": [
+            {
+              "type": "text",
+              "name": "description",
+              "title": "Description of the document"
+            },
+            {
+              "type": "text",
+              "name": "link",
+              "title": "Link to document",
+              "inputType": "url",
+              "placeholder": "https://..."
+            }
+          ]
         },
         {
-          "type": "text",
-          "name": "link",
-          "title": "Link to document",
-          "inputType": "url",
-          "placeholder": "https://..."
-        }
-      ]
-      }, 
-       {
           "type": "panel",
           "name": "org_chart",
           "title": "Organization chart for the national statistical office",
@@ -38,8 +37,10 @@
               "type": "text",
               "name": "org_chart_link",
               "title": "Link to document",
-              "inputType": "url"
-            }          ]
+              "inputType": "url",
+              "placeholder": "https://..."
+            }
+          ]
         },
         {
           "type": "panel",
@@ -50,7 +51,8 @@
               "type": "text",
               "name": "work_programme_link",
               "title": "Link to document",
-              "inputType": "url"
+              "inputType": "url",
+              "placeholder": "https://..."
             }
           ]
         },
@@ -63,7 +65,8 @@
               "type": "text",
               "name": "staff_overview_link",
               "title": "Link to document",
-              "inputType": "url"
+              "inputType": "url",
+              "placeholder": "https://..."
             }
           ]
         },
@@ -76,7 +79,8 @@
               "type": "text",
               "name": "budget_overview_link",
               "title": "Link to document",
-              "inputType": "url"
+              "inputType": "url",
+              "placeholder": "https://..."
             }
           ]
         },
@@ -89,59 +93,58 @@
               "type": "text",
               "name": "release_calendar_link",
               "title": "Link to document",
-              "inputType": "url"
+              "inputType": "url",
+              "placeholder": "https://..."
             }
           ]
         },
-      {
-      "type": "panelDynamic",
-      "name": "policy_documents",
-      "title": "Policy documents (e.g., on quality, confidentiality, data protection, dissemination, revisions, etc.)",
-      "templateTitle": "Document {panelIndex}",
-      "panelAddText": "Add another document",
-      "panelRemoveText": "Remove",
-      "minPanelCount": 1,
-      "templateElements": [
         {
-          "type": "text",
-          "name": "description",
-          "title": "Description of the document",
-          "isRequired": false
+          "type": "panelDynamic",
+          "name": "policy_documents",
+          "title": "Policy documents (e.g., on quality, confidentiality, data protection, dissemination, revisions, etc.)",
+          "templateTitle": "Document {panelIndex}",
+          "panelAddText": "Add another document",
+          "panelRemoveText": "Remove",
+          "minPanelCount": 1,
+          "templateElements": [
+            {
+              "type": "text",
+              "name": "description",
+              "title": "Description of the document"
+            },
+            {
+              "type": "text",
+              "name": "link",
+              "title": "Link to document",
+              "inputType": "url",
+              "placeholder": "https://..."
+            }
+          ]
         },
         {
-          "type": "text",
-          "name": "link",
-          "title": "Link to document",
-          "inputType": "url",
-          "placeholder": "https://..."
+          "type": "panelDynamic",
+          "name": "methodology_documents",
+          "title": "Methodology documents (e.g., on data collection instruments such as censuses and sample surveys; compilation of statistical outputs, etc.)",
+          "templateTitle": "Document {panelIndex}",
+          "panelAddText": "Add another document",
+          "panelRemoveText": "Remove",
+          "minPanelCount": 1,
+          "templateElements": [
+            {
+              "type": "text",
+              "name": "description",
+              "title": "Description of the document"
+            },
+            {
+              "type": "text",
+              "name": "link",
+              "title": "Link to document",
+              "inputType": "url",
+              "placeholder": "https://..."
+            }
+          ]
         }
       ]
-      },
-      {
-      "type": "panelDynamic",
-      "name": "methodology_documents",
-      "title": "Methodology documents (e.g., on data collection instruments such as censuses and sample surveys; compilation of statistical outputs, etc.)",
-      "templateTitle": "Document {panelIndex}",
-      "panelAddText": "Add another document",
-      "panelRemoveText": "Remove",
-      "minPanelCount": 1,
-      "templateElements": [
-        {
-          "type": "text",
-          "name": "description",
-          "title": "Description of the document",
-          "isRequired": false
-        },
-        {
-          "type": "text",
-          "name": "link",
-          "title": "Link to document",
-          "inputType": "url",
-          "placeholder": "https://..."
-        }
-      ]
-      }
-    ]
     }
   ]
 }
