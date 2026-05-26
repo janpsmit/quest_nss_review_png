@@ -41,10 +41,6 @@ app.post("/save", (req, res) => {
   res.json({ status: "ok" });
 });
 
-app.listen(PORT, () => {
-  console.log(`✅ Server running on http://localhost:${PORT}`);
-});
-
 app.get("/export-word", async (req, res) => {
   try {
     const data = JSON.parse(fs.readFileSync("data/shared_survey.json", "utf-8"));
@@ -96,3 +92,6 @@ app.get("/export-word", async (req, res) => {
   }
 });
 
+app.listen(PORT, () => {
+  console.log(`✅ Server running on http://localhost:${PORT}`);
+});
