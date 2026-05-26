@@ -10,24 +10,6 @@ import nationalStatisticalOffice from "./survey/part3_national_statistical_offic
 import subjectAreas from "./survey/part4_subject_areas.json";
 import supportDocuments from "./survey/part5_supporting_documents.json";
 
-<div style={{ marginBottom: "20px" }}>
-  <button
-    onClick={() => {
-      window.open(`${API_URL}/export-word`, "_blank");
-    }}
-    style={{
-      backgroundColor: "#5B92E5",
-      color: "white",
-      padding: "10px 16px",
-      border: "none",
-      borderRadius: "6px",
-      cursor: "pointer",
-    }}
-  >
-    Download Word report
-  </button>
-</div>
-
 export default function App() {
   const survey = new Model({
     title:
@@ -132,9 +114,31 @@ export default function App() {
     }
   });
 
-  return (
-    <div style={{ maxWidth: "900px", margin: "40px auto" }}>
-      <Survey model={survey} />
+return (
+  <div style={{ maxWidth: "900px", margin: "40px auto" }}>
+
+    {/* ✅ Download button */}
+    <div style={{ marginBottom: "20px" }}>
+      <button
+        onClick={() => {
+          window.open(`${API_URL}/export-word`, "_blank");
+        }}
+        style={{
+          backgroundColor: "#5B92E5",
+          color: "white",
+          padding: "10px 16px",
+          border: "none",
+          borderRadius: "6px",
+          cursor: "pointer",
+        }}
+      >
+        Download Word report
+      </button>
     </div>
-  );
+
+    {/* ✅ Survey */}
+    <Survey model={survey} />
+
+  </div>
+);
 }
