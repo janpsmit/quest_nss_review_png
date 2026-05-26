@@ -56,7 +56,7 @@ export default function App() {
 
   // ✅ Load shared data
   useEffect(() => {
-    fetch("fetch(`${API_URL}/load`)")
+    fetch(`${API_URL}/load`) // ✅ no comma here
       .then((res) => res.json())
       .then((data) => {
         survey.data = data || {};
@@ -81,7 +81,7 @@ export default function App() {
   // ✅ Save + update status
   survey.onValueChanged.add((sender, options) => {
     // save to server
-    fetch("fetch(`${API_URL}/save`", {
+    fetch(`${API_URL}/save`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
