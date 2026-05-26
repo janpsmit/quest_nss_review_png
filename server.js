@@ -46,7 +46,7 @@ app.get("/export-word", async (req, res) => {
             new Paragraph({
               children: [
                 new TextRun({
-                  text: "Global Assessment – Self-Assessment",
+                  text: "Review of the national statistical system of Papua New Guinea – Self-assessment questionnaire",
                   bold: true,
                   size: 32,
                 }),
@@ -91,4 +91,3 @@ const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
-
