@@ -54,45 +54,9 @@ export default function App() {
 
   const API_URL = "https://png-nss-review-self-assessment.onrender.com";
 
-  // ✅ Load shared data
-  useEffect(() => {
-    fetch(`${API_URL}/load`) // ✅ no comma here
-      .then((res) => res.json())
-      .then((data) => {
-        survey.data = data || {};
-
-        // initialise status
-        const areas = survey.getValue("subject_areas");
-
-        if (Array.isArray(areas)) {
-          const updated = areas.map((d) => ({
-            ...d,
-            _status: getDomainStatus(d),
-          }));
-
-          survey.setValue("subject_areas", updated);
-        }
-      })
-      .catch((err) => {
-        console.error("Error loading data:", err);
-      });
-  }, []);
-
-  // ✅ Save + update status
-  survey.onValueChanged.add((sender, options) => {
-    // save to server
-    fetch(`${API_URL}/save`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        [options.name]: options.value,
-      }),
-    });
-
-    // update status
-    const areas = sender.getValue("subject_areas");
+  // ✅ Helper: update panel titles + status
+  function updatePanelTitles(survey) {
+    const areas = survey.getValue("subject_areas");
 
     if (!Array.isArray(areas)) return;
 
@@ -103,42 +67,83 @@ export default function App() {
       if (status === "empty") label = "⭕ empty";
       else if (status === "started") label = "🟡 in progress";
       else label = "✅ completed";
+
       return {
         ...d,
         _status: label,
       };
     });
 
+    // only update if changed (avoid loops)
     if (JSON.stringify(areas) !== JSON.stringify(updated)) {
-      sender.setValue("subject_areas", updated);
+      survey.setValue("subject_areas", updated);
     }
+
+    // ✅ Update panel titles
+    const panels = survey.getAllPanels();
+
+    panels.forEach((panel) => {
+      if (panel.data && panel.data.domain && panel.data._status) {
+        panel.title = `${panel.data.domain} (${panel.data._status})`;
+      }
+    });
+  }
+
+  // ✅ Load shared data
+  useEffect(() => {
+    fetch(`${API_URL}/load`)
+      .then((res) => res.json())
+      .then((data) => {
+        survey.data = data || {};
+
+        // ✅ set titles after loading
+        updatePanelTitles(survey);
+      })
+      .catch((err) => {
+        console.error("Error loading data:", err);
+      });
+  }, []);
+
+  // ✅ Save + update status
+  survey.onValueChanged.add((sender, options) => {
+    // ✅ save to backend
+    fetch(`${API_URL}/save`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        [options.name]: options.value,
+      }),
+    });
+
+    // ✅ update status + titles
+    updatePanelTitles(sender);
   });
 
-return (
-  <div style={{ maxWidth: "900px", margin: "40px auto" }}>
+  return (
+    <div style={{ maxWidth: "900px", margin: "40px auto" }}>
+      {/* ✅ Download button */}
+      <div style={{ marginBottom: "20px" }}>
+        <button
+          onClick={() => {
+            window.open(`${API_URL}/export-word`, "_blank");
+          }}
+          style={{
+            backgroundColor: "#5B92E5",
+            color: "white",
+            padding: "10px 16px",
+            border: "none",
+            borderRadius: "6px",
+            cursor: "pointer",
+          }}
+        >
+          Download Word report
+        </button>
+      </div>
 
-    {/* ✅ Download button */}
-    <div style={{ marginBottom: "20px" }}>
-      <button
-        onClick={() => {
-          window.open(`${API_URL}/export-word`, "_blank");
-        }}
-        style={{
-          backgroundColor: "#5B92E5",
-          color: "white",
-          padding: "10px 16px",
-          border: "none",
-          borderRadius: "6px",
-          cursor: "pointer",
-        }}
-      >
-        Download Word report
-      </button>
+      {/* ✅ Survey */}
+      <Survey model={survey} />
     </div>
-
-    {/* ✅ Survey */}
-    <Survey model={survey} />
-
-  </div>
-);
+  );
 }
