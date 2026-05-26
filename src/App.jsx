@@ -25,9 +25,8 @@ export default function App() {
     ],
   });
 
-// ✅ Enable HTML in titles (THIS IS THE FIX)
-survey.allowHtmlInTitles = true;
-
+  // ✅ Enable HTML in titles (THIS IS THE FIX)
+  survey.allowHtmlInTitles = true;
   survey.showTOC = true;
   survey.tocLocation = "left";
   survey.showProgressBar = "top";
@@ -53,9 +52,11 @@ survey.allowHtmlInTitles = true;
     return "filled";
   };
 
+  const API_URL = "https://png-nss-review-self-assessment.onrender.com";
+
   // ✅ Load shared data
   useEffect(() => {
-    fetch("http://localhost:3001/load")
+    fetch("fetch(`${API_URL}/load`)")
       .then((res) => res.json())
       .then((data) => {
         survey.data = data || {};
@@ -80,7 +81,7 @@ survey.allowHtmlInTitles = true;
   // ✅ Save + update status
   survey.onValueChanged.add((sender, options) => {
     // save to server
-    fetch("http://localhost:3001/save", {
+    fetch("fetch(`${API_URL}/save`", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
