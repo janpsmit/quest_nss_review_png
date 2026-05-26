@@ -4,11 +4,6 @@ import fs from "fs";
 import { Document, Packer, Paragraph, TextRun } from "docx";
 
 const app = express();
-const PORT = process.env.PORT || 3001;
-
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
 
 app.use(cors());
 app.use(express.json());
@@ -91,6 +86,9 @@ app.get("/export-word", async (req, res) => {
   }
 });
 
+const PORT = process.env.PORT || 3001;
+
 app.listen(PORT, () => {
-  console.log(`✅ Server running on http://localhost:${PORT}`);
+  console.log(`Server running on port ${PORT}`);
 });
+
