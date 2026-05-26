@@ -1,7 +1,6 @@
 import cors from "cors";
 import express from "express";
 import fs from "fs";
-import cors from "cors";
 import { Document, Packer, Paragraph, TextRun } from "docx";
 
 const app = express();
