@@ -2,48 +2,29 @@
   "pages": [
     {
       "name": "contributor_information",
-      "title": "Contributor information",
+      "title": "Primary contact / focal point",
       "description": "Please provide basic information about yourself and your entity. This helps us understand the source of responses and follow up if needed.",
       "elements": [
         {
           "type": "text",
           "name": "contributor_name",
-          "title": "Name",
-          "isRequired": false
+          "title": "Name"
         },
         {
           "type": "text",
           "name": "contributor_organization",
-          "title": "Organization / unit",
-          "isRequired": false
+          "title": "Organization / unit"
         },
         {
           "type": "text",
           "name": "contributor_position",
-          "title": "Position / role (optional)"
+          "title": "Position / role"
         },
         {
           "type": "text",
           "name": "contributor_email",
-          "title": "Email address (optional)",
+          "title": "Email address",
           "inputType": "email"
-        },
-        {
-          "type": "checkbox",
-          "name": "contribution_areas",
-          "title": "Which parts of the questionnaire are you contributing to? (optional)",
-          "choices": [
-            "Part 1 – Legal framework and professional independence",
-            "Part 2 - National statistical system",
-            "Part 3 - National Statistical Office",
-            "Part 4 – Statistical domains",
-            "Part 5 – Supporting documents"
-          ]
-        },
-        {
-          "type": "comment",
-          "name": "contribution_notes",
-          "title": "If relevant, please briefly indicate which specific topics or sections you are contributing to (optional)"
         },
         {
           "type": "html",
