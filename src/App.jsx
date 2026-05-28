@@ -31,6 +31,7 @@ export default function App() {
   survey.tocLocation = "left";
   survey.showProgressBar = "top";
   survey.progressBarType = "pages";
+  survey.showCompleteButton = false;
 
   // ✅ Completion logic
   const getDomainStatus = (domain) => {
