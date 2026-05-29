@@ -57,23 +57,21 @@ export default function App() {
 
   // ✅ Load shared data
   useEffect(() => {
-    fetch(`${API_URL}/load`)
+    // ✅ RESET backend data completely
+    fetch(`${API_URL}/save`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({}), // overwrite everything
+    })
+      .then(() => {
+        // after reset, load normally
+        return fetch(`${API_URL}/load`);
+      })
       .then((res) => res.json())
       .then((data) => {
-        // ✅ Always create a clean object
-        const cleanData = {
-          ...data,
-        };
-
-        // ✅ REMOVE corrupted fields explicitly
-        delete cleanData.subject_areas;
-        delete cleanData.contributor_name; // ← important
-        delete cleanData.contributor_organisation; // ← important
-
-        survey.data = cleanData || {};
-      })
-      .catch((err) => {
-        console.error("Error loading data:", err);
+        survey.data = data || {};
       });
   }, []);
 
