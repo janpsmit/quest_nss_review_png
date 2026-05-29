@@ -25,6 +25,41 @@ export default function App() {
     ],
   });
 
+// ✅ ADD IT HERE
+setTimeout(() => {
+  if (!survey.getValue("subject_areas") || survey.getValue("subject_areas").length === 0) {
+    survey.setValue("subject_areas", [
+      { domain: "Population statistics" },
+      { domain: "Migration statistics" },
+      { domain: "Labour statistics" },
+      { domain: "Education statistics" },
+      { domain: "Health statistics" },
+      { domain: "Income and consumption statistics" },
+      { domain: "Social protection statistics" },
+      { domain: "Human settlements and housing statistics" },
+      { domain: "Culture statistics" },
+      { domain: "Time-use statistics" },
+      { domain: "Macroeconomic accounts and statistics" },
+      { domain: "Business statistics" },
+      { domain: "Economic sectoral statistics" },
+      { domain: "International trade statistics" },
+      { domain: "Price statistics" },
+      { domain: "Science, technology and innovation statistics" },
+      { domain: "Environment statistics" },
+      { domain: "Governance statistics" },
+      { domain: "Sustainable development statistics" },
+      { domain: "Human rights statistics" },
+      { domain: "Gender statistics" },
+      { domain: "Statistics on special population groups" },
+      { domain: "Living conditions and poverty statistics" },
+      { domain: "Climate statistics" },
+      { domain: "Regional and small area statistics" },
+      { domain: "Information society and digitalization statistics" },
+      { domain: "Circular economy statistics" }
+    ]);
+  }
+}, 100);
+
   // ✅ Enable HTML in titles (THIS IS THE FIX)
   survey.allowHtmlInTitles = true;
   survey.showTOC = true;
