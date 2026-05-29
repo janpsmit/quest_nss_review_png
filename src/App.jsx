@@ -55,50 +55,12 @@ export default function App() {
 
   const API_URL = "https://png-nss-review-self-assessment.onrender.com";
 
-  // ✅ Helper: update panel titles + status
-  function updatePanelTitles(survey) {
-    const areas = survey.getValue("subject_areas");
-
-    if (!Array.isArray(areas)) return;
-
-    const updated = areas.map((d) => {
-      const status = getDomainStatus(d);
-
-      let label = "";
-      if (status === "empty") label = "⭕ empty";
-      else if (status === "started") label = "🟡 in progress";
-      else label = "✅ completed";
-
-      return {
-        ...d,
-        _status: label,
-      };
-    });
-
-    // only update if changed (avoid loops)
-    if (JSON.stringify(areas) !== JSON.stringify(updated)) {
-      survey.setValue("subject_areas", updated);
-    }
-
-    // ✅ Update panel titles
-    const panels = survey.getAllPanels();
-
-    panels.forEach((panel) => {
-      if (panel.data && panel.data.domain && panel.data._status) {
-        panel.title = `${panel.data.domain} (${panel.data._status})`;
-      }
-    });
-  }
-
   // ✅ Load shared data
   useEffect(() => {
     fetch(`${API_URL}/load`)
       .then((res) => res.json())
       .then((data) => {
         survey.data = data || {};
-
-        // ✅ set titles after loading
-        updatePanelTitles(survey);
       })
       .catch((err) => {
         console.error("Error loading data:", err);
@@ -117,9 +79,6 @@ export default function App() {
         [options.name]: options.value,
       }),
     });
-
-    // ✅ update status + titles
-    updatePanelTitles(sender);
   });
 
   return (
