@@ -60,13 +60,17 @@ export default function App() {
     fetch(`${API_URL}/load`)
       .then((res) => res.json())
       .then((data) => {
-        // ✅ remove corrupted panel data
-        if (data && data.subject_areas) {
-          delete data.subject_areas;
-        }
+        // ✅ Always create a clean object
+        const cleanData = {
+          ...data,
+        };
 
-        // ✅ now apply cleaned data
-        survey.data = data || {};
+        // ✅ REMOVE corrupted fields explicitly
+        delete cleanData.subject_areas;
+        delete cleanData.contributor_name; // ← important
+        delete cleanData.contributor_organisation; // ← important
+
+        survey.data = cleanData || {};
       })
       .catch((err) => {
         console.error("Error loading data:", err);
