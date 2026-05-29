@@ -60,6 +60,11 @@ export default function App() {
     fetch(`${API_URL}/load`)
       .then((res) => res.json())
       .then((data) => {
+        // ✅ remove corrupted panel data
+        if (data && data.subject_areas) {
+          delete data.subject_areas;
+        }
+
         survey.data = data || {};
       })
       .catch((err) => {
