@@ -65,6 +65,7 @@ export default function App() {
           delete data.subject_areas;
         }
 
+        // ✅ now apply cleaned data
         survey.data = data || {};
       })
       .catch((err) => {

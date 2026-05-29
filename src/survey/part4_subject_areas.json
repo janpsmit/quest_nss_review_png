@@ -14,7 +14,7 @@
           "minPanelCount": 27,
           "maxPanelCount": 27,
           "panelsState": "collapsed",
-          "templateTitle": " ",
+          "templateTitle": "{panel.domain}",
           "allowAddPanel": false,
           "allowRemovePanel": false,
           "allowMovePanel": false,
