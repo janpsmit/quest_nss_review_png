@@ -19,7 +19,12 @@
           "allowRemovePanel": false,
           "allowMovePanel": false,
           "templateElements": [
-           {
+            {
+              "type": "text",
+              "name": "domain",
+              "visible": false
+            },
+            {
               "type": "comment",
               "name": "standards",
               "title": "Which international standards are used (including version number where appropriate)?"
