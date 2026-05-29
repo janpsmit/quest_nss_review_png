@@ -56,24 +56,18 @@ export default function App() {
   const API_URL = "https://png-nss-review-self-assessment.onrender.com";
 
   // ✅ Load shared data
-  useEffect(() => {
-    // ✅ RESET backend data completely
-    fetch(`${API_URL}/save`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({}), // overwrite everything
-    })
-      .then(() => {
-        // after reset, load normally
-        return fetch(`${API_URL}/load`);
-      })
-      .then((res) => res.json())
-      .then((data) => {
-        survey.data = data || {};
-      });
-  }, []);
+useEffect(() => {
+  fetch(`${API_URL}/save`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({})  // 🔥 force overwrite backend data
+  }).then(() => {
+    // ✅ load clean state AFTER reset
+    survey.data = {};
+  });
+}, []);
 
   // ✅ Save + update status
   survey.onValueChanged.add((sender, options) => {
