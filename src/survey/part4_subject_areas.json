@@ -14,74 +14,63 @@
           "minPanelCount": 27,
           "maxPanelCount": 27,
           "panelsState": "collapsed",
-          "templateTitle": "{panel.domain}",
+          "templateTitle": "{domain}",
           "allowAddPanel": false,
           "allowRemovePanel": false,
           "allowMovePanel": false,
           "templateElements": [
             {
-              "type": "text",
-              "name": "domain",
-              "expression": "{panel.domain}",
-              "visible": false
-            },
-            {
-              "type": "comment",
-              "name": "standards",
-              "title": "Which international standards are used (including version number where appropriate)?"
-            },
-            {
-              "type": "comment",
-              "name": "data_sources",
-              "title": "What data sources are used?"
-            },
-            {
-              "type": "comment",
-              "name": "challenges",
-              "title": "What are the main challenges currently?"
-            },
-            {
-              "type": "comment",
-              "name": "future_plans",
-              "title": "What are your plans for future development?"
-            },
-            {
-              "type": "comment",
-              "name": "support_needed",
-              "title": "What support do you need from international organizations?"
-            }
-          ],
-          "defaultValue": [
-            { "domain": "Population statistics" },
-            { "domain": "Migration statistics" },
-            { "domain": "Labour statistics" },
-            { "domain": "Education statistics" },
-            { "domain": "Health statistics" },
-            { "domain": "Income and consumption statistics" },
-            { "domain": "Social protection statistics" },
-            { "domain": "Human settlements and housing statistics" },
-            { "domain": "Culture statistics" },
-            { "domain": "Time-use statistics" },
-            { "domain": "Macroeconomic accounts and statistics" },
-            { "domain": "Business statistics" },
-            { "domain": "Economic sectoral statistics" },
-            { "domain": "International trade statistics" },
-            { "domain": "Price statistics" },
-            { "domain": "Science, technology and innovation statistics" },
-            { "domain": "Environment statistics" },
-            { "domain": "Governance statistics" },
-            { "domain": "Sustainable development statistics" },
-            { "domain": "Human rights statistics" },
-            { "domain": "Gender statistics" },
-            { "domain": "Statistics on special population groups" },
-            { "domain": "Living conditions and poverty statistics" },
-            { "domain": "Climate statistics" },
-            { "domain": "Regional and small area statistics" },
-            { "domain": "Information society and digitalization statistics" },
-            { "domain": "Circular economy statistics" }
-          ]
+              "type": "html",
+              "name": "domain_display",
+              "html": "<b>{panel.domain}</b>"
+              },
+              {
+                "type": "comment",
+                "name": "standards",
+                "title": "Which international standards are used (including version number where appropriate)?"
+                },
+                {
+                  "type": "comment",
+                  "name": "data_sources",
+                  "title": "What data sources are used?"
+                  },
+                  {
+                    "type": "comment",
+                    "name": "challenges",
+                    "title": "What are the main challenges currently?"
+                    }
+                    ],
+                    "defaultValue": [
+                      { "domain": "Population statistics" },
+                      { "domain": "Migration statistics" },
+                      { "domain": "Labour statistics" },
+                      { "domain": "Education statistics" },
+                      { "domain": "Health statistics" },
+                      { "domain": "Income and consumption statistics" },
+                      { "domain": "Social protection statistics" },
+                      { "domain": "Human settlements and housing statistics" },
+                      { "domain": "Culture statistics" },
+                      { "domain": "Time-use statistics" },
+                      { "domain": "Macroeconomic accounts and statistics" },
+                      { "domain": "Business statistics" },
+                      { "domain": "Economic sectoral statistics" },
+                      { "domain": "International trade statistics" },
+                      { "domain": "Price statistics" },
+                      { "domain": "Science, technology and innovation statistics" },
+                      { "domain": "Environment statistics" },
+                      { "domain": "Governance statistics" },
+                      { "domain": "Sustainable development statistics" },
+                      { "domain": "Human rights statistics" },
+                      { "domain": "Gender statistics" },
+                      { "domain": "Statistics on special population groups" },
+                      { "domain": "Living conditions and poverty statistics" },
+                      { "domain": "Climate statistics" },
+                      { "domain": "Regional and small area statistics" },
+                      { "domain": "Information society and digitalization statistics" },
+                      { "domain": "Circular economy statistics" }
+                    ]
         }
       ]
     }
-  ]
+  ]   
 }
