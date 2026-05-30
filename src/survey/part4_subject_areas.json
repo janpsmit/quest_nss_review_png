@@ -6,360 +6,899 @@
       "description": "Please answer the following questions for each statistical domain. Concise but informative responses are sufficient. If a domain is not applicable, please briefly explain why.",
       "elements": [
         {
-[
-  {
-    "type": "panel",
-    "name": "population_statistics",
-    "title": "Population statistics",
-    "state": "collapsed",
-    "elements": [
-      { "type": "comment", "name": "population_standards", "title": "Which international standards are used (including version number where appropriate)?" },
-      { "type": "comment", "name": "population_data_sources", "title": "What data sources are used?" },
-      { "type": "comment", "name": "population_challenges", "title": "What are the main challenges currently?" },
-      { "type": "comment", "name": "population_future_plans", "title": "What are your plans for future development?" },
-      { "type": "comment", "name": "population_support_needed", "title": "What support do you need from international organizations?" }
-    ]
-  },
-  {
-    "type": "panel",
-    "name": "migration_statistics",
-    "title": "Migration statistics",
-    "state": "collapsed",
-    "elements": [
-      { "type": "comment", "name": "migration_standards", "title": "Which international standards are used (including version number where appropriate)?" },
-      { "type": "comment", "name": "migration_data_sources", "title": "What data sources are used?" },
-      { "type": "comment", "name": "migration_challenges", "title": "What are the main challenges currently?" },
-      { "type": "comment", "name": "migration_future_plans", "title": "What are your plans for future development?" },
-      { "type": "comment", "name": "migration_support_needed", "title": "What support do you need from international organizations?" }
-    ]
-  },
-  {
-    "type": "panel",
-    "name": "labour_statistics",
-    "title": "Labour statistics",
-    "state": "collapsed",
-    "elements": [
-      { "type": "comment", "name": "labour_standards", "title": "Which international standards are used (including version number where appropriate)?" },
-      { "type": "comment", "name": "labour_data_sources", "title": "What data sources are used?" },
-      { "type": "comment", "name": "labour_challenges", "title": "What are the main challenges currently?" },
-      { "type": "comment", "name": "labour_future_plans", "title": "What are your plans for future development?" },
-      { "type": "comment", "name": "labour_support_needed", "title": "What support do you need from international organizations?" }
-    ]
-  },
-  {
-    "type": "panel",
-    "name": "education_statistics",
-    "title": "Education statistics",
-    "state": "collapsed",
-    "elements": [
-      { "type": "comment", "name": "education_standards", "title": "Which international standards are used (including version number where appropriate)?" },
-      { "type": "comment", "name": "education_data_sources", "title": "What data sources are used?" },
-      { "type": "comment", "name": "education_challenges", "title": "What are the main challenges currently?" },
-      { "type": "comment", "name": "education_future_plans", "title": "What are your plans for future development?" },
-      { "type": "comment", "name": "education_support_needed", "title": "What support do you need from international organizations?" }
-    ]
-  },
-  {
-    "type": "panel",
-    "name": "health_statistics",
-    "title": "Health statistics",
-    "state": "collapsed",
-    "elements": [
-      { "type": "comment", "name": "health_standards", "title": "Which international standards are used (including version number where appropriate)?" },
-      { "type": "comment", "name": "health_data_sources", "title": "What data sources are used?" },
-      { "type": "comment", "name": "health_challenges", "title": "What are the main challenges currently?" },
-      { "type": "comment", "name": "health_future_plans", "title": "What are your plans for future development?" },
-      { "type": "comment", "name": "health_support_needed", "title": "What support do you need from international organizations?" }
-    ]
-  },
-  {
-    "type": "panel",
-    "name": "income_consumption_statistics",
-    "title": "Income and consumption statistics",
-    "state": "collapsed",
-    "elements": [
-      { "type": "comment", "name": "income_standards", "title": "Which international standards are used (including version number where appropriate)?" },
-      { "type": "comment", "name": "income_data_sources", "title": "What data sources are used?" },
-      { "type": "comment", "name": "income_challenges", "title": "What are the main challenges currently?" },
-      { "type": "comment", "name": "income_future_plans", "title": "What are your plans for future development?" },
-      { "type": "comment", "name": "income_support_needed", "title": "What support do you need from international organizations?" }
-    ]
-  },
-  {
-    "type": "panel",
-    "name": "social_protection_statistics",
-    "title": "Social protection statistics",
-    "state": "collapsed",
-    "elements": [
-      { "type": "comment", "name": "social_standards", "title": "Which international standards are used (including version number where appropriate)?" },
-      { "type": "comment", "name": "social_data_sources", "title": "What data sources are used?" },
-      { "type": "comment", "name": "social_challenges", "title": "What are the main challenges currently?" },
-      { "type": "comment", "name": "social_future_plans", "title": "What are your plans for future development?" },
-      { "type": "comment", "name": "social_support_needed", "title": "What support do you need from international organizations?" }
-    ]
-  },
-  {
-    "type": "panel",
-    "name": "human_settlements_statistics",
-    "title": "Human settlements and housing statistics",
-    "state": "collapsed",
-    "elements": [
-      { "type": "comment", "name": "housing_standards", "title": "Which international standards are used (including version number where appropriate)?" },
-      { "type": "comment", "name": "housing_data_sources", "title": "What data sources are used?" },
-      { "type": "comment", "name": "housing_challenges", "title": "What are the main challenges currently?" },
-      { "type": "comment", "name": "housing_future_plans", "title": "What are your plans for future development?" },
-      { "type": "comment", "name": "housing_support_needed", "title": "What support do you need from international organizations?" }
-    ]
-  },
-  {
-    "type": "panel",
-    "name": "culture_statistics",
-    "title": "Culture statistics",
-    "state": "collapsed",
-    "elements": [
-      { "type": "comment", "name": "culture_standards", "title": "Which international standards are used (including version number where appropriate)?" },
-      { "type": "comment", "name": "culture_data_sources", "title": "What data sources are used?" },
-      { "type": "comment", "name": "culture_challenges", "title": "What are the main challenges currently?" },
-      { "type": "comment", "name": "culture_future_plans", "title": "What are your plans for future development?" },
-      { "type": "comment", "name": "culture_support_needed", "title": "What support do you need from international organizations?" }
-    ]
-  },
-  ,
-{
-  "type": "panel",
-  "name": "time_use_statistics",
-  "title": "Time-use statistics",
-  "state": "collapsed",
-  "elements": [
-    { "type": "comment", "name": "time_standards", "title": "Which international standards are used (including version number where appropriate)?" },
-    { "type": "comment", "name": "time_data_sources", "title": "What data sources are used?" },
-    { "type": "comment", "name": "time_challenges", "title": "What are the main challenges currently?" },
-    { "type": "comment", "name": "time_future_plans", "title": "What are your plans for future development?" },
-    { "type": "comment", "name": "time_support_needed", "title": "What support do you need from international organizations?" }
-  ]
-},
-{
-  "type": "panel",
-  "name": "macroeconomic_statistics",
-  "title": "Macroeconomic accounts and statistics",
-  "state": "collapsed",
-  "elements": [
-    { "type": "comment", "name": "macro_standards", "title": "Which international standards are used (including version number where appropriate)?" },
-    { "type": "comment", "name": "macro_data_sources", "title": "What data sources are used?" },
-    { "type": "comment", "name": "macro_challenges", "title": "What are the main challenges currently?" },
-    { "type": "comment", "name": "macro_future_plans", "title": "What are your plans for future development?" },
-    { "type": "comment", "name": "macro_support_needed", "title": "What support do you need from international organizations?" }
-  ]
-},
-{
-  "type": "panel",
-  "name": "business_statistics",
-  "title": "Business statistics",
-  "state": "collapsed",
-  "elements": [
-    { "type": "comment", "name": "business_standards", "title": "Which international standards are used (including version number where appropriate)?" },
-    { "type": "comment", "name": "business_data_sources", "title": "What data sources are used?" },
-    { "type": "comment", "name": "business_challenges", "title": "What are the main challenges currently?" },
-    { "type": "comment", "name": "business_future_plans", "title": "What are your plans for future development?" },
-    { "type": "comment", "name": "business_support_needed", "title": "What support do you need from international organizations?" }
-  ]
-},
-{
-  "type": "panel",
-  "name": "economic_sectoral_statistics",
-  "title": "Economic sectoral statistics",
-  "state": "collapsed",
-  "elements": [
-    { "type": "comment", "name": "sectoral_standards", "title": "Which international standards are used (including version number where appropriate)?" },
-    { "type": "comment", "name": "sectoral_data_sources", "title": "What data sources are used?" },
-    { "type": "comment", "name": "sectoral_challenges", "title": "What are the main challenges currently?" },
-    { "type": "comment", "name": "sectoral_future_plans", "title": "What are your plans for future development?" },
-    { "type": "comment", "name": "sectoral_support_needed", "title": "What support do you need from international organizations?" }
-  ]
-},
-{
-  "type": "panel",
-  "name": "international_trade_statistics",
-  "title": "International trade statistics",
-  "state": "collapsed",
-  "elements": [
-    { "type": "comment", "name": "trade_standards", "title": "Which international standards are used (including version number where appropriate)?" },
-    { "type": "comment", "name": "trade_data_sources", "title": "What data sources are used?" },
-    { "type": "comment", "name": "trade_challenges", "title": "What are the main challenges currently?" },
-    { "type": "comment", "name": "trade_future_plans", "title": "What are your plans for future development?" },
-    { "type": "comment", "name": "trade_support_needed", "title": "What support do you need from international organizations?" }
-  ]
-},
-{
-  "type": "panel",
-  "name": "price_statistics",
-  "title": "Price statistics",
-  "state": "collapsed",
-  "elements": [
-    { "type": "comment", "name": "price_standards", "title": "Which international standards are used (including version number where appropriate)?" },
-    { "type": "comment", "name": "price_data_sources", "title": "What data sources are used?" },
-    { "type": "comment", "name": "price_challenges", "title": "What are the main challenges currently?" },
-    { "type": "comment", "name": "price_future_plans", "title": "What are your plans for future development?" },
-    { "type": "comment", "name": "price_support_needed", "title": "What support do you need from international organizations?" }
-  ]
-},
-{
-  "type": "panel",
-  "name": "science_innovation_statistics",
-  "title": "Science, technology and innovation statistics",
-  "state": "collapsed",
-  "elements": [
-    { "type": "comment", "name": "science_standards", "title": "Which international standards are used (including version number where appropriate)?" },
-    { "type": "comment", "name": "science_data_sources", "title": "What data sources are used?" },
-    { "type": "comment", "name": "science_challenges", "title": "What are the main challenges currently?" },
-    { "type": "comment", "name": "science_future_plans", "title": "What are your plans for future development?" },
-    { "type": "comment", "name": "science_support_needed", "title": "What support do you need from international organizations?" }
-  ]
-},
-{
-  "type": "panel",
-  "name": "environment_statistics",
-  "title": "Environment statistics",
-  "state": "collapsed",
-  "elements": [
-    { "type": "comment", "name": "environment_standards", "title": "Which international standards are used (including version number where appropriate)?" },
-    { "type": "comment", "name": "environment_data_sources", "title": "What data sources are used?" },
-    { "type": "comment", "name": "environment_challenges", "title": "What are the main challenges currently?" },
-    { "type": "comment", "name": "environment_future_plans", "title": "What are your plans for future development?" },
-    { "type": "comment", "name": "environment_support_needed", "title": "What support do you need from international organizations?" }
-  ]
-},
-{
-  "type": "panel",
-  "name": "governance_statistics",
-  "title": "Governance statistics",
-  "state": "collapsed",
-  "elements": [
-    { "type": "comment", "name": "governance_standards", "title": "Which international standards are used (including version number where appropriate)?" },
-    { "type": "comment", "name": "governance_data_sources", "title": "What data sources are used?" },
-    { "type": "comment", "name": "governance_challenges", "title": "What are the main challenges currently?" },
-    { "type": "comment", "name": "governance_future_plans", "title": "What are your plans for future development?" },
-    { "type": "comment", "name": "governance_support_needed", "title": "What support do you need from international organizations?" }
-  ]
-},
-{
-  "type": "panel",
-  "name": "sustainable_development_statistics",
-  "title": "Sustainable development statistics",
-  "state": "collapsed",
-  "elements": [
-    { "type": "comment", "name": "sdg_standards", "title": "Which international standards are used (including version number where appropriate)?" },
-    { "type": "comment", "name": "sdg_data_sources", "title": "What data sources are used?" },
-    { "type": "comment", "name": "sdg_challenges", "title": "What are the main challenges currently?" },
-    { "type": "comment", "name": "sdg_future_plans", "title": "What are your plans for future development?" },
-    { "type": "comment", "name": "sdg_support_needed", "title": "What support do you need from international organizations?" }
-  ]
-},
-{
-  "type": "panel",
-  "name": "human_rights_statistics",
-  "title": "Human rights statistics",
-  "state": "collapsed",
-  "elements": [
-    { "type": "comment", "name": "hr_standards", "title": "Which international standards are used (including version number where appropriate)?" },
-    { "type": "comment", "name": "hr_data_sources", "title": "What data sources are used?" },
-    { "type": "comment", "name": "hr_challenges", "title": "What are the main challenges currently?" },
-    { "type": "comment", "name": "hr_future_plans", "title": "What are your plans for future development?" },
-    { "type": "comment", "name": "hr_support_needed", "title": "What support do you need from international organizations?" }
-  ]
-},
-{
-  "type": "panel",
-  "name": "gender_statistics",
-  "title": "Gender statistics",
-  "state": "collapsed",
-  "elements": [
-    { "type": "comment", "name": "gender_standards", "title": "Which international standards are used (including version number where appropriate)?" },
-    { "type": "comment", "name": "gender_data_sources", "title": "What data sources are used?" },
-    { "type": "comment", "name": "gender_challenges", "title": "What are the main challenges currently?" },
-    { "type": "comment", "name": "gender_future_plans", "title": "What are your plans for future development?" },
-    { "type": "comment", "name": "gender_support_needed", "title": "What support do you need from international organizations?" }
-  ]
-},
-{
-  "type": "panel",
-  "name": "special_groups_statistics",
-  "title": "Statistics on special population groups",
-  "state": "collapsed",
-  "elements": [
-    { "type": "comment", "name": "special_standards", "title": "Which international standards are used (including version number where appropriate)?" },
-    { "type": "comment", "name": "special_data_sources", "title": "What data sources are used?" },
-    { "type": "comment", "name": "special_challenges", "title": "What are the main challenges currently?" },
-    { "type": "comment", "name": "special_future_plans", "title": "What are your plans for future development?" },
-    { "type": "comment", "name": "special_support_needed", "title": "What support do you need from international organizations?" }
-  ]
-},
-{
-  "type": "panel",
-  "name": "living_conditions_statistics",
-  "title": "Living conditions and poverty statistics",
-  "state": "collapsed",
-  "elements": [
-    { "type": "comment", "name": "living_standards", "title": "Which international standards are used (including version number where appropriate)?" },
-    { "type": "comment", "name": "living_data_sources", "title": "What data sources are used?" },
-    { "type": "comment", "name": "living_challenges", "title": "What are the main challenges currently?" },
-    { "type": "comment", "name": "living_future_plans", "title": "What are your plans for future development?" },
-    { "type": "comment", "name": "living_support_needed", "title": "What support do you need from international organizations?" }
-  ]
-},
-{
-  "type": "panel",
-  "name": "climate_statistics",
-  "title": "Climate statistics",
-  "state": "collapsed",
-  "elements": [
-    { "type": "comment", "name": "climate_standards", "title": "Which international standards are used (including version number where appropriate)?" },
-    { "type": "comment", "name": "climate_data_sources", "title": "What data sources are used?" },
-    { "type": "comment", "name": "climate_challenges", "title": "What are the main challenges currently?" },
-    { "type": "comment", "name": "climate_future_plans", "title": "What are your plans for future development?" },
-    { "type": "comment", "name": "climate_support_needed", "title": "What support do you need from international organizations?" }
-  ]
-},
-{
-  "type": "panel",
-  "name": "regional_statistics",
-  "title": "Regional and small area statistics",
-  "state": "collapsed",
-  "elements": [
-    { "type": "comment", "name": "regional_standards", "title": "Which international standards are used (including version number where appropriate)?" },
-    { "type": "comment", "name": "regional_data_sources", "title": "What data sources are used?" },
-    { "type": "comment", "name": "regional_challenges", "title": "What are the main challenges currently?" },
-    { "type": "comment", "name": "regional_future_plans", "title": "What are your plans for future development?" },
-    { "type": "comment", "name": "regional_support_needed", "title": "What support do you need from international organizations?" }
-  ]
-},
-{
-  "type": "panel",
-  "name": "digital_statistics",
-  "title": "Information society and digitalization statistics",
-  "state": "collapsed",
-  "elements": [
-    { "type": "comment", "name": "digital_standards", "title": "Which international standards are used (including version number where appropriate)?" },
-    { "type": "comment", "name": "digital_data_sources", "title": "What data sources are used?" },
-    { "type": "comment", "name": "digital_challenges", "title": "What are the main challenges currently?" },
-    { "type": "comment", "name": "digital_future_plans", "title": "What are your plans for future development?" },
-    { "type": "comment", "name": "digital_support_needed", "title": "What support do you need from international organizations?" }
-  ]
-},
-{
-  "type": "panel",
-  "name": "circular_economy_statistics",
-  "title": "Circular economy statistics",
-  "state": "collapsed",
-  "elements": [
-    { "type": "comment", "name": "circular_standards", "title": "Which international standards are used (including version number where appropriate)?" },
-    { "type": "comment", "name": "circular_data_sources", "title": "What data sources are used?" },
-    { "type": "comment", "name": "circular_challenges", "title": "What are the main challenges currently?" },
-    { "type": "comment", "name": "circular_future_plans", "title": "What are your plans for future development?" },
-    { "type": "comment", "name": "circular_support_needed", "title": "What support do you need from international organizations?" }
-  ]
-}
-]
+          [
+            {
+              "type": "panel",
+              "name": "population_statistics",
+              "title": "Population statistics",
+              "state": "collapsed",
+              "elements": [
+                {
+                  "type": "comment",
+                  "name": "population_standards",
+                  "title": "Which international standards are used (including version number where appropriate)?"
+                },
+                {
+                  "type": "comment",
+                  "name": "population_data_sources",
+                  "title": "What data sources are used?"
+                },
+                {
+                  "type": "comment",
+                  "name": "population_challenges",
+                  "title": "What are the main challenges currently?"
+                },
+                {
+                  "type": "comment",
+                  "name": "population_future_plans",
+                  "title": "What are your plans for future development?"
+                },
+                {
+                  "type": "comment",
+                  "name": "population_support_needed",
+                  "title": "What support do you need from international organizations?"
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "migration_statistics",
+              "title": "Migration statistics",
+              "state": "collapsed",
+              "elements": [
+                {
+                  "type": "comment",
+                  "name": "migration_standards",
+                  "title": "Which international standards are used (including version number where appropriate)?"
+                },
+                {
+                  "type": "comment",
+                  "name": "migration_data_sources",
+                  "title": "What data sources are used?"
+                },
+                {
+                  "type": "comment",
+                  "name": "migration_challenges",
+                  "title": "What are the main challenges currently?"
+                },
+                {
+                  "type": "comment",
+                  "name": "migration_future_plans",
+                  "title": "What are your plans for future development?"
+                },
+                {
+                  "type": "comment",
+                  "name": "migration_support_needed",
+                  "title": "What support do you need from international organizations?"
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "labour_statistics",
+              "title": "Labour statistics",
+              "state": "collapsed",
+              "elements": [
+                {
+                  "type": "comment",
+                  "name": "labour_standards",
+                  "title": "Which international standards are used (including version number where appropriate)?"
+                },
+                {
+                  "type": "comment",
+                  "name": "labour_data_sources",
+                  "title": "What data sources are used?"
+                },
+                {
+                  "type": "comment",
+                  "name": "labour_challenges",
+                  "title": "What are the main challenges currently?"
+                },
+                {
+                  "type": "comment",
+                  "name": "labour_future_plans",
+                  "title": "What are your plans for future development?"
+                },
+                {
+                  "type": "comment",
+                  "name": "labour_support_needed",
+                  "title": "What support do you need from international organizations?"
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "education_statistics",
+              "title": "Education statistics",
+              "state": "collapsed",
+              "elements": [
+                {
+                  "type": "comment",
+                  "name": "education_standards",
+                  "title": "Which international standards are used (including version number where appropriate)?"
+                },
+                {
+                  "type": "comment",
+                  "name": "education_data_sources",
+                  "title": "What data sources are used?"
+                },
+                {
+                  "type": "comment",
+                  "name": "education_challenges",
+                  "title": "What are the main challenges currently?"
+                },
+                {
+                  "type": "comment",
+                  "name": "education_future_plans",
+                  "title": "What are your plans for future development?"
+                },
+                {
+                  "type": "comment",
+                  "name": "education_support_needed",
+                  "title": "What support do you need from international organizations?"
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "health_statistics",
+              "title": "Health statistics",
+              "state": "collapsed",
+              "elements": [
+                {
+                  "type": "comment",
+                  "name": "health_standards",
+                  "title": "Which international standards are used (including version number where appropriate)?"
+                },
+                {
+                  "type": "comment",
+                  "name": "health_data_sources",
+                  "title": "What data sources are used?"
+                },
+                {
+                  "type": "comment",
+                  "name": "health_challenges",
+                  "title": "What are the main challenges currently?"
+                },
+                {
+                  "type": "comment",
+                  "name": "health_future_plans",
+                  "title": "What are your plans for future development?"
+                },
+                {
+                  "type": "comment",
+                  "name": "health_support_needed",
+                  "title": "What support do you need from international organizations?"
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "income_consumption_statistics",
+              "title": "Income and consumption statistics",
+              "state": "collapsed",
+              "elements": [
+                {
+                  "type": "comment",
+                  "name": "income_standards",
+                  "title": "Which international standards are used (including version number where appropriate)?"
+                },
+                {
+                  "type": "comment",
+                  "name": "income_data_sources",
+                  "title": "What data sources are used?"
+                },
+                {
+                  "type": "comment",
+                  "name": "income_challenges",
+                  "title": "What are the main challenges currently?"
+                },
+                {
+                  "type": "comment",
+                  "name": "income_future_plans",
+                  "title": "What are your plans for future development?"
+                },
+                {
+                  "type": "comment",
+                  "name": "income_support_needed",
+                  "title": "What support do you need from international organizations?"
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "social_protection_statistics",
+              "title": "Social protection statistics",
+              "state": "collapsed",
+              "elements": [
+                {
+                  "type": "comment",
+                  "name": "social_standards",
+                  "title": "Which international standards are used (including version number where appropriate)?"
+                },
+                {
+                  "type": "comment",
+                  "name": "social_data_sources",
+                  "title": "What data sources are used?"
+                },
+                {
+                  "type": "comment",
+                  "name": "social_challenges",
+                  "title": "What are the main challenges currently?"
+                },
+                {
+                  "type": "comment",
+                  "name": "social_future_plans",
+                  "title": "What are your plans for future development?"
+                },
+                {
+                  "type": "comment",
+                  "name": "social_support_needed",
+                  "title": "What support do you need from international organizations?"
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "human_settlements_statistics",
+              "title": "Human settlements and housing statistics",
+              "state": "collapsed",
+              "elements": [
+                {
+                  "type": "comment",
+                  "name": "housing_standards",
+                  "title": "Which international standards are used (including version number where appropriate)?"
+                },
+                {
+                  "type": "comment",
+                  "name": "housing_data_sources",
+                  "title": "What data sources are used?"
+                },
+                {
+                  "type": "comment",
+                  "name": "housing_challenges",
+                  "title": "What are the main challenges currently?"
+                },
+                {
+                  "type": "comment",
+                  "name": "housing_future_plans",
+                  "title": "What are your plans for future development?"
+                },
+                {
+                  "type": "comment",
+                  "name": "housing_support_needed",
+                  "title": "What support do you need from international organizations?"
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "culture_statistics",
+              "title": "Culture statistics",
+              "state": "collapsed",
+              "elements": [
+                {
+                  "type": "comment",
+                  "name": "culture_standards",
+                  "title": "Which international standards are used (including version number where appropriate)?"
+                },
+                {
+                  "type": "comment",
+                  "name": "culture_data_sources",
+                  "title": "What data sources are used?"
+                },
+                {
+                  "type": "comment",
+                  "name": "culture_challenges",
+                  "title": "What are the main challenges currently?"
+                },
+                {
+                  "type": "comment",
+                  "name": "culture_future_plans",
+                  "title": "What are your plans for future development?"
+                },
+                {
+                  "type": "comment",
+                  "name": "culture_support_needed",
+                  "title": "What support do you need from international organizations?"
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "time_use_statistics",
+              "title": "Time-use statistics",
+              "state": "collapsed",
+              "elements": [
+                {
+                  "type": "comment",
+                  "name": "time_standards",
+                  "title": "Which international standards are used (including version number where appropriate)?"
+                },
+                {
+                  "type": "comment",
+                  "name": "time_data_sources",
+                  "title": "What data sources are used?"
+                },
+                {
+                  "type": "comment",
+                  "name": "time_challenges",
+                  "title": "What are the main challenges currently?"
+                },
+                {
+                  "type": "comment",
+                  "name": "time_future_plans",
+                  "title": "What are your plans for future development?"
+                },
+                {
+                  "type": "comment",
+                  "name": "time_support_needed",
+                  "title": "What support do you need from international organizations?"
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "macroeconomic_statistics",
+              "title": "Macroeconomic accounts and statistics",
+              "state": "collapsed",
+              "elements": [
+                {
+                  "type": "comment",
+                  "name": "macro_standards",
+                  "title": "Which international standards are used (including version number where appropriate)?"
+                },
+                {
+                  "type": "comment",
+                  "name": "macro_data_sources",
+                  "title": "What data sources are used?"
+                },
+                {
+                  "type": "comment",
+                  "name": "macro_challenges",
+                  "title": "What are the main challenges currently?"
+                },
+                {
+                  "type": "comment",
+                  "name": "macro_future_plans",
+                  "title": "What are your plans for future development?"
+                },
+                {
+                  "type": "comment",
+                  "name": "macro_support_needed",
+                  "title": "What support do you need from international organizations?"
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "business_statistics",
+              "title": "Business statistics",
+              "state": "collapsed",
+              "elements": [
+                {
+                  "type": "comment",
+                  "name": "business_standards",
+                  "title": "Which international standards are used (including version number where appropriate)?"
+                },
+                {
+                  "type": "comment",
+                  "name": "business_data_sources",
+                  "title": "What data sources are used?"
+                },
+                {
+                  "type": "comment",
+                  "name": "business_challenges",
+                  "title": "What are the main challenges currently?"
+                },
+                {
+                  "type": "comment",
+                  "name": "business_future_plans",
+                  "title": "What are your plans for future development?"
+                },
+                {
+                  "type": "comment",
+                  "name": "business_support_needed",
+                  "title": "What support do you need from international organizations?"
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "economic_sectoral_statistics",
+              "title": "Economic sectoral statistics",
+              "state": "collapsed",
+              "elements": [
+                {
+                  "type": "comment",
+                  "name": "sectoral_standards",
+                  "title": "Which international standards are used (including version number where appropriate)?"
+                },
+                {
+                  "type": "comment",
+                  "name": "sectoral_data_sources",
+                  "title": "What data sources are used?"
+                },
+                {
+                  "type": "comment",
+                  "name": "sectoral_challenges",
+                  "title": "What are the main challenges currently?"
+                },
+                {
+                  "type": "comment",
+                  "name": "sectoral_future_plans",
+                  "title": "What are your plans for future development?"
+                },
+                {
+                  "type": "comment",
+                  "name": "sectoral_support_needed",
+                  "title": "What support do you need from international organizations?"
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "international_trade_statistics",
+              "title": "International trade statistics",
+              "state": "collapsed",
+              "elements": [
+                {
+                  "type": "comment",
+                  "name": "trade_standards",
+                  "title": "Which international standards are used (including version number where appropriate)?"
+                },
+                {
+                  "type": "comment",
+                  "name": "trade_data_sources",
+                  "title": "What data sources are used?"
+                },
+                {
+                  "type": "comment",
+                  "name": "trade_challenges",
+                  "title": "What are the main challenges currently?"
+                },
+                {
+                  "type": "comment",
+                  "name": "trade_future_plans",
+                  "title": "What are your plans for future development?"
+                },
+                {
+                  "type": "comment",
+                  "name": "trade_support_needed",
+                  "title": "What support do you need from international organizations?"
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "price_statistics",
+              "title": "Price statistics",
+              "state": "collapsed",
+              "elements": [
+                {
+                  "type": "comment",
+                  "name": "price_standards",
+                  "title": "Which international standards are used (including version number where appropriate)?"
+                },
+                {
+                  "type": "comment",
+                  "name": "price_data_sources",
+                  "title": "What data sources are used?"
+                },
+                {
+                  "type": "comment",
+                  "name": "price_challenges",
+                  "title": "What are the main challenges currently?"
+                },
+                {
+                  "type": "comment",
+                  "name": "price_future_plans",
+                  "title": "What are your plans for future development?"
+                },
+                {
+                  "type": "comment",
+                  "name": "price_support_needed",
+                  "title": "What support do you need from international organizations?"
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "science_innovation_statistics",
+              "title": "Science, technology and innovation statistics",
+              "state": "collapsed",
+              "elements": [
+                {
+                  "type": "comment",
+                  "name": "science_standards",
+                  "title": "Which international standards are used (including version number where appropriate)?"
+                },
+                {
+                  "type": "comment",
+                  "name": "science_data_sources",
+                  "title": "What data sources are used?"
+                },
+                {
+                  "type": "comment",
+                  "name": "science_challenges",
+                  "title": "What are the main challenges currently?"
+                },
+                {
+                  "type": "comment",
+                  "name": "science_future_plans",
+                  "title": "What are your plans for future development?"
+                },
+                {
+                  "type": "comment",
+                  "name": "science_support_needed",
+                  "title": "What support do you need from international organizations?"
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "environment_statistics",
+              "title": "Environment statistics",
+              "state": "collapsed",
+              "elements": [
+                {
+                  "type": "comment",
+                  "name": "environment_standards",
+                  "title": "Which international standards are used (including version number where appropriate)?"
+                },
+                {
+                  "type": "comment",
+                  "name": "environment_data_sources",
+                  "title": "What data sources are used?"
+                },
+                {
+                  "type": "comment",
+                  "name": "environment_challenges",
+                  "title": "What are the main challenges currently?"
+                },
+                {
+                  "type": "comment",
+                  "name": "environment_future_plans",
+                  "title": "What are your plans for future development?"
+                },
+                {
+                  "type": "comment",
+                  "name": "environment_support_needed",
+                  "title": "What support do you need from international organizations?"
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "governance_statistics",
+              "title": "Governance statistics",
+              "state": "collapsed",
+              "elements": [
+                {
+                  "type": "comment",
+                  "name": "governance_standards",
+                  "title": "Which international standards are used (including version number where appropriate)?"
+                },
+                {
+                  "type": "comment",
+                  "name": "governance_data_sources",
+                  "title": "What data sources are used?"
+                },
+                {
+                  "type": "comment",
+                  "name": "governance_challenges",
+                  "title": "What are the main challenges currently?"
+                },
+                {
+                  "type": "comment",
+                  "name": "governance_future_plans",
+                  "title": "What are your plans for future development?"
+                },
+                {
+                  "type": "comment",
+                  "name": "governance_support_needed",
+                  "title": "What support do you need from international organizations?"
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "sustainable_development_statistics",
+              "title": "Sustainable development statistics",
+              "state": "collapsed",
+              "elements": [
+                {
+                  "type": "comment",
+                  "name": "sdg_standards",
+                  "title": "Which international standards are used (including version number where appropriate)?"
+                },
+                {
+                  "type": "comment",
+                  "name": "sdg_data_sources",
+                  "title": "What data sources are used?"
+                },
+                {
+                  "type": "comment",
+                  "name": "sdg_challenges",
+                  "title": "What are the main challenges currently?"
+                },
+                {
+                  "type": "comment",
+                  "name": "sdg_future_plans",
+                  "title": "What are your plans for future development?"
+                },
+                {
+                  "type": "comment",
+                  "name": "sdg_support_needed",
+                  "title": "What support do you need from international organizations?"
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "human_rights_statistics",
+              "title": "Human rights statistics",
+              "state": "collapsed",
+              "elements": [
+                {
+                  "type": "comment",
+                  "name": "hr_standards",
+                  "title": "Which international standards are used (including version number where appropriate)?"
+                },
+                {
+                  "type": "comment",
+                  "name": "hr_data_sources",
+                  "title": "What data sources are used?"
+                },
+                {
+                  "type": "comment",
+                  "name": "hr_challenges",
+                  "title": "What are the main challenges currently?"
+                },
+                {
+                  "type": "comment",
+                  "name": "hr_future_plans",
+                  "title": "What are your plans for future development?"
+                },
+                {
+                  "type": "comment",
+                  "name": "hr_support_needed",
+                  "title": "What support do you need from international organizations?"
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "gender_statistics",
+              "title": "Gender statistics",
+              "state": "collapsed",
+              "elements": [
+                {
+                  "type": "comment",
+                  "name": "gender_standards",
+                  "title": "Which international standards are used (including version number where appropriate)?"
+                },
+                {
+                  "type": "comment",
+                  "name": "gender_data_sources",
+                  "title": "What data sources are used?"
+                },
+                {
+                  "type": "comment",
+                  "name": "gender_challenges",
+                  "title": "What are the main challenges currently?"
+                },
+                {
+                  "type": "comment",
+                  "name": "gender_future_plans",
+                  "title": "What are your plans for future development?"
+                },
+                {
+                  "type": "comment",
+                  "name": "gender_support_needed",
+                  "title": "What support do you need from international organizations?"
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "special_groups_statistics",
+              "title": "Statistics on special population groups",
+              "state": "collapsed",
+              "elements": [
+                {
+                  "type": "comment",
+                  "name": "special_standards",
+                  "title": "Which international standards are used (including version number where appropriate)?"
+                },
+                {
+                  "type": "comment",
+                  "name": "special_data_sources",
+                  "title": "What data sources are used?"
+                },
+                {
+                  "type": "comment",
+                  "name": "special_challenges",
+                  "title": "What are the main challenges currently?"
+                },
+                {
+                  "type": "comment",
+                  "name": "special_future_plans",
+                  "title": "What are your plans for future development?"
+                },
+                {
+                  "type": "comment",
+                  "name": "special_support_needed",
+                  "title": "What support do you need from international organizations?"
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "living_conditions_statistics",
+              "title": "Living conditions and poverty statistics",
+              "state": "collapsed",
+              "elements": [
+                {
+                  "type": "comment",
+                  "name": "living_standards",
+                  "title": "Which international standards are used (including version number where appropriate)?"
+                },
+                {
+                  "type": "comment",
+                  "name": "living_data_sources",
+                  "title": "What data sources are used?"
+                },
+                {
+                  "type": "comment",
+                  "name": "living_challenges",
+                  "title": "What are the main challenges currently?"
+                },
+                {
+                  "type": "comment",
+                  "name": "living_future_plans",
+                  "title": "What are your plans for future development?"
+                },
+                {
+                  "type": "comment",
+                  "name": "living_support_needed",
+                  "title": "What support do you need from international organizations?"
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "climate_statistics",
+              "title": "Climate statistics",
+              "state": "collapsed",
+              "elements": [
+                {
+                  "type": "comment",
+                  "name": "climate_standards",
+                  "title": "Which international standards are used (including version number where appropriate)?"
+                },
+                {
+                  "type": "comment",
+                  "name": "climate_data_sources",
+                  "title": "What data sources are used?"
+                },
+                {
+                  "type": "comment",
+                  "name": "climate_challenges",
+                  "title": "What are the main challenges currently?"
+                },
+                {
+                  "type": "comment",
+                  "name": "climate_future_plans",
+                  "title": "What are your plans for future development?"
+                },
+                {
+                  "type": "comment",
+                  "name": "climate_support_needed",
+                  "title": "What support do you need from international organizations?"
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "regional_statistics",
+              "title": "Regional and small area statistics",
+              "state": "collapsed",
+              "elements": [
+                {
+                  "type": "comment",
+                  "name": "regional_standards",
+                  "title": "Which international standards are used (including version number where appropriate)?"
+                },
+                {
+                  "type": "comment",
+                  "name": "regional_data_sources",
+                  "title": "What data sources are used?"
+                },
+                {
+                  "type": "comment",
+                  "name": "regional_challenges",
+                  "title": "What are the main challenges currently?"
+                },
+                {
+                  "type": "comment",
+                  "name": "regional_future_plans",
+                  "title": "What are your plans for future development?"
+                },
+                {
+                  "type": "comment",
+                  "name": "regional_support_needed",
+                  "title": "What support do you need from international organizations?"
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "digital_statistics",
+              "title": "Information society and digitalization statistics",
+              "state": "collapsed",
+              "elements": [
+                {
+                  "type": "comment",
+                  "name": "digital_standards",
+                  "title": "Which international standards are used (including version number where appropriate)?"
+                },
+                {
+                  "type": "comment",
+                  "name": "digital_data_sources",
+                  "title": "What data sources are used?"
+                },
+                {
+                  "type": "comment",
+                  "name": "digital_challenges",
+                  "title": "What are the main challenges currently?"
+                },
+                {
+                  "type": "comment",
+                  "name": "digital_future_plans",
+                  "title": "What are your plans for future development?"
+                },
+                {
+                  "type": "comment",
+                  "name": "digital_support_needed",
+                  "title": "What support do you need from international organizations?"
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "circular_economy_statistics",
+              "title": "Circular economy statistics",
+              "state": "collapsed",
+              "elements": [
+                {
+                  "type": "comment",
+                  "name": "circular_standards",
+                  "title": "Which international standards are used (including version number where appropriate)?"
+                },
+                {
+                  "type": "comment",
+                  "name": "circular_data_sources",
+                  "title": "What data sources are used?"
+                },
+                {
+                  "type": "comment",
+                  "name": "circular_challenges",
+                  "title": "What are the main challenges currently?"
+                },
+                {
+                  "type": "comment",
+                  "name": "circular_future_plans",
+                  "title": "What are your plans for future development?"
+                },
+                {
+                  "type": "comment",
+                  "name": "circular_support_needed",
+                  "title": "What support do you need from international organizations?"
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
-  ]
-}
