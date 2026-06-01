@@ -18,7 +18,7 @@
         {
           "type": "html",
           "name": "structure_text",
-          "html": "<h4>Structure</h4><ul><li><strong>Part 1 – Institutional issues</strong>: legal framework, professional independence, safeguarding statistical confidentiality.</li><li><strong>Part 2 – National statistical system</strong>: members, coordinations, access to administrative data and user consultation.</li><li><strong>Part 3 - National Statistical Office</strong>: organization, resources, dissemination, stakeholders, international cooperation, data sources and quality assurance.</li><li><strong>Part 4 – Main statistical subject-matter domains</strong>: assessment of key statistical activities.</li><li><strong>Part 5 – Supporting documents</strong>: Links to relevant laws, strategies, policies, and other background material.</li></ul>"
+          "html": "<h4>Structure</h4><ul><li><strong>Part 1 – Institutional issues</strong>: legal framework, professional independence, safeguarding statistical confidentiality.</li><li><strong>Part 2 – National statistical system</strong>: members, coordinations, data sources, access to administrative data, quality assurance and user consultation.</li><li><strong>Part 3 - National Statistical Office</strong>: organization, resources, dissemination, stakeholders and international cooperation.</li><li><strong>Part 4 – Main statistical subject-matter domains</strong>: assessment of key statistical activities.</li><li><strong>Part 5 – Supporting documents</strong>: Links to relevant laws, strategies, policies, and other background material.</li></ul>"
         },
         {
           "type": "html",
