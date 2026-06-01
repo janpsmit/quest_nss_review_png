@@ -56,18 +56,18 @@ export default function App() {
   const API_URL = "https://png-nss-review-self-assessment.onrender.com";
 
   // ✅ Load shared data
-useEffect(() => {
-  fetch(`${API_URL}/save`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({})  // 🔥 force overwrite backend data
-  }).then(() => {
-    // ✅ load clean state AFTER reset
-    survey.data = {};
-  });
-}, []);
+  useEffect(() => {
+    fetch(`${API_URL}/save`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({})  // 🔥 force overwrite backend data
+    }).then(() => {
+      // ✅ load clean state AFTER reset
+      survey.data = {};
+    });
+  }, []);
 
   // ✅ Save + update status
   survey.onValueChanged.add((sender, options) => {
@@ -88,8 +88,9 @@ useEffect(() => {
       {/* ✅ Download button */}
       <div style={{ marginBottom: "20px" }}>
         <button
-          onClick={() => {
-            window.open(`${API_URL}/export-word`, "_blank");
+          onClick={async () => {
+            await fetch(`${API_URL}/export-word`);
+            alert("Export completed");
           }}
           style={{
             backgroundColor: "#5B92E5",
