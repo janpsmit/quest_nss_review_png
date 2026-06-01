@@ -2,7 +2,7 @@
   "pages": [
     {
       "name": "legal_framework_professional_independence",
-      "title": "Part 1 - Legal framework,professional independence, and statistical confidentiality",
+      "title": "Part 1 - Legal framework, professional independence, and statistical confidentiality",
       "description": "Please answer the following questions about the legal framework for official statistics, the professional independence of the national statistical authorities, and safeguarding statistical confidentiality. Concise but informative responses are sufficient. If an issue is not applicable, please briefly explain why.",
       "elements": [
         {
@@ -30,7 +30,12 @@
             {
               "type": "comment",
               "name": "independence_appointment_dismissal",
-              "title": "How is professional independence ensured by national statistical legislation and in practice with regard to the appointment and dismissal procedures of top management, and freedom from any interference?"
+              "title": "How are the appointment and dismissal procedures of top management ensured by national statistical legislation and in practice?"
+            },
+            {
+              "type": "comment",
+              "name": "independence_freedom_from_interference",
+              "title": "How is freedom from any interference in statistical processes ensured by national statistical legislation and in practice?"
             },
             {
               "type": "comment",
