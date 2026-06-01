@@ -36,30 +36,6 @@
         },
         {
           "type": "panel",
-          "name": "access",
-          "title": "Access to administrative data",
-          "elements": [
-            {
-              "type": "comment",
-              "name": "access_q1",
-              "title": "How does the National Statistical Office in practice ensure access to administrative data in accordance with article 5 of the Statistical Services Act 1980?"
-            }
-          ]
-        },
-        {
-          "type": "panel",
-          "name": "consultation",
-          "title": "User consultation",
-          "elements": [
-            {
-              "type": "comment",
-              "name": "consultation_q1",
-              "title": "What mechanism(s) is/are in place to ensure that the official statistics produced throughout the national statistical system continuously meet the evolving needs of all possible users, including State agencies, the public, businesses, researchers and the media?"
-            }
-          ]
-        },
-        {
-          "type": "panel",
           "name": "data_sources",
           "title": "Data sources",
           "elements": [
@@ -72,6 +48,18 @@
         },
         {
           "type": "panel",
+          "name": "access",
+          "title": "Access to administrative data",
+          "elements": [
+            {
+              "type": "comment",
+              "name": "access_q1",
+              "title": "How does the National Statistical Office in practice ensure access to administrative data in accordance with article 5 of the Statistical Services Act 1980?"
+            }
+          ]
+        },
+        {
+          "type": "panel",
           "name": "quality_assurance",
           "title": "Quality assurance",
           "elements": [
@@ -79,6 +67,18 @@
               "type": "comment",
               "name": "quality_assurance_q1",
               "title": "Please describe the quality assurance policy and instruments the national statistical system is using. This may include a quality assurance framework; using GSBPM (Generic Statistical Business Process Model) checklists and quality indicators for the design of statistical business processes; validation procedures at data capture; editing and imputation procedures at data processing; and producing, and possibly publishing, producer-oriented and user-oriented quality reports."
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "consultation",
+          "title": "User consultation",
+          "elements": [
+            {
+              "type": "comment",
+              "name": "consultation_q1",
+              "title": "What mechanism(s) is/are in place to ensure that the official statistics produced throughout the national statistical system continuously meet the evolving needs of all possible users, including State agencies, the public, businesses, researchers and the media?"
             }
           ]
         }
