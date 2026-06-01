@@ -37,33 +37,14 @@ app.post("/save", (req, res) => {
 
 app.get("/export-word", async (req, res) => {
   try {
-    const data = JSON.parse(fs.readFileSync("data/shared_survey.json", "utf-8"));
+    const data = JSON.parse(
+      fs.readFileSync("data/shared_survey.json", "utf-8"),
+    );
 
     const doc = new Document({
       sections: [
         {
-          children: [
-            new Paragraph({
-              children: [
-                new TextRun({
-                  text: "Review of the national statistical system of Papua New Guinea – Self-assessment questionnaire",
-                  bold: true,
-                  size: 32,
-                }),
-              ],
-            }),
-
-            new Paragraph(""),
-
-            ...Object.entries(data).map(([key, value]) => {
-              return new Paragraph({
-                children: [
-                  new TextRun({ text: `${key}: `, bold: true }),
-                  new TextRun({ text: JSON.stringify(value) }),
-                ],
-              });
-            }),
-          ],
+          children: [new Paragraph("Test document")],
         },
       ],
     });
@@ -71,17 +52,15 @@ app.get("/export-word", async (req, res) => {
     const buffer = await Packer.toBuffer(doc);
 
     res.setHeader(
-      "Content-Disposition",
-      "attachment; filename=assessment.docx"
-    );
-    res.setHeader(
       "Content-Type",
-      "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+      "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
     );
 
+    res.setHeader("Content-Disposition", "attachment; filename=report.docx");
+
     res.send(buffer);
-  } catch (err) {
-    console.error("Export error:", err);
+  } catch (error) {
+    console.error(error);
     res.status(500).send("Error generating document");
   }
 });
