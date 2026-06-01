@@ -28,8 +28,13 @@
         {
           "type": "html",
           "name": "documents_text",
-          "html": "<h4>Supporting documents</h4><p>In Part 5, links to documents available on websites are preferred. If this is not possible, you may create a Google Drive folder and share the link.</p>"
-        }
+          "html": "<h4>Supporting documents</h4><p>In Part 5, links to documents available on websites are preferred. If this is not possible, please create a Google Drive folder and share the link.</p>"
+        },
+        {
+          "type": "html",
+          "name": "export_text",
+          "html": "<h4>Download Word report</h4><p>At the top of this page you can download a Word version of your responses.</p>"
+        }        
       ]
     }
   ]

@@ -3,7 +3,7 @@
     {
       "name": "part5_supporting_documents",
       "title": "Part 5 – Supporting documents",
-      "description": "Please provide links to the latest versions of the following documents. For documents available on websites, please provide the URL. For documents not available on websites, please upload the document to Google Drive and provide the link. If a document is not available, please briefly explain why.",
+      "description": "Please provide links to the latest versions of the following documents. For documents available on websites, please provide the URL. For documents not available on websites, please create a Google Drive folder and upload them there and provide the link. If a document is not available, please briefly explain why.",
       "elements": [
         {
           "type": "panelDynamic",

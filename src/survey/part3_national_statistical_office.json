@@ -3,7 +3,7 @@
     {
       "name": "national_statistical_office",
       "title": "Part 3 - National Statistical Office",
-      "description": "Please answer the following questions about the national statistical office in your country. Concise but informative responses are sufficient. If an issue is not applicable, please briefly explain why.",
+      "description": "Please answer the following questions about the National Statistical Office. Concise but informative responses are sufficient. If an issue is not applicable, please briefly explain why.",
       "elements": [
         {
           "type": "panel",
