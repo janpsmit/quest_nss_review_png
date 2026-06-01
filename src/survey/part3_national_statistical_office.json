@@ -1,0 +1,160 @@
+{
+  "pages": [
+    {
+      "name": "national_statistical_office",
+      "title": "Part 3 - National Statistical Office",
+      "description": "Please answer the following questions about the national statistical office in your country. Concise but informative responses are sufficient. If an issue is not applicable, please briefly explain why.",
+      "elements": [
+        {
+          "type": "panel",
+          "name": "organization",
+          "title": "Organization",
+          "elements": [
+            {
+              "type": "comment",
+              "name": "organization_q1",
+              "title": "Please describe how the National Statistical Office is organized. What are its main units and subunits, what are their responsibilities and how are they staffed? Are there any local offices? If so, what are their responsibilities and how are they staffed?"
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "resources",
+          "title": "Resources and resource management",
+          "elements": [
+            {
+              "type": "html",
+              "name": "financial_header",
+              "html": "<h4>Financial resources</h4>"
+            },
+
+            {
+              "type": "comment",
+              "name": "financial",
+              "title": "Please describe the financial resources available to the National Statistical Office. What is/are the process(es) that determine these resources? Are the financial resources of the NSO and the broader national statistical system sufficient to reach the objectives set out in the current National Strategy for the Development of Statistics?"
+            },
+
+            {
+              "type": "html",
+              "name": "staff_header",
+              "html": "<h4>Human resources</h4>"
+            },
+
+            {
+              "type": "html",
+              "name": "recruitment_label",
+              "html": "<span class='sub-label'>Recruitment</span>"
+            },
+
+            {
+              "type": "comment",
+              "name": "recruitment",
+              "title": "Please describe the process(es) through which the National Statistical Office recruits its staff. Does/do this/these process(es) ensure that the NSO is staffed at the levels of knowledge and experience required?"
+            },
+
+            {
+              "type": "html",
+              "name": "retention_label",
+              "html": "<span class='sub-label'>Retention</span>"
+            },
+
+            {
+              "type": "comment",
+              "name": "retention",
+              "title": "Please indicate if, and if so to what extent, the retention of staff is a challenge for the National Statistical Office. In case it is, are any measures in place to limit the undesirable high staff turnover rate?"
+            },
+
+            {
+              "type": "html",
+              "name": "training_label",
+              "html": "<span class='sub-label'>Training and development</span>"
+            },
+
+            {
+              "type": "comment",
+              "name": "training",
+              "title": "Please describe the process(es) through which the National Statistical Office trains and develops its staff. Does/do this/these process(es) ensure that the NSO staff continuously develop the knowledge and experience required to produce high quality official statistics?"
+            },
+
+            {
+              "type": "html",
+              "name": "ict_header",
+              "html": "<h4>ICT resources</h4>"
+            },
+
+            {
+              "type": "comment",
+              "name": "ict",
+              "title": "Please describe the ICT resources available to the National Statistical Office, both in terms of hardware and software. Are these resources sufficient to reach the objectives set out in the current National Strategy for the Development of Statistics?"
+            }
+          ]
+        },
+
+        {
+          "type": "panel",
+          "name": "dissemination",
+          "title": "Dissemination policy and practices",
+          "elements": [
+            {
+              "type": "comment",
+              "name": "dissemination_q1",
+              "title": "Please describe the dissemination policy and practices of the National Statistical Office. Apart from having its website, is the NSO active on platforms such as Facebook, X, BlueSky, Instagram or LinkedIn? Does the NSO have an advance release calendar? Are all users given access to newly released statistics and/or revisions simultaneously?"
+            }
+          ]
+        },
+
+        {
+          "type": "panel",
+          "name": "stakeholder_consultation",
+          "title": "Relations and communication with main stakeholders",
+          "elements": [
+            {
+              "type": "comment",
+              "name": "stakeholder_consultation_q1",
+              "title": "How does the National Statistical Office communicate and otherwise maintain relations with stakeholders such as other government entities, businesses, academia, media, and the public? Is there a mechanism in place to consult stakeholders on (evolving) user demand and the annual programme of work?"
+            }
+          ]
+        },
+
+        {
+          "type": "panel",
+          "name": "international_relations",
+          "title": "International cooperation",
+          "elements": [
+            {
+              "type": "comment",
+              "name": "international_relations_q1",
+              "title": "Please describe the support that the National Statistical Office is currently receiving, and has been receiving over the last five years, from international development partners."
+            }
+          ]
+        },
+
+        {
+          "type": "panel",
+          "name": "data_sources",
+          "title": "Data sources",
+          "elements": [
+            {
+              "type": "comment",
+              "name": "data_sources_q1",
+              "title": "Please list the censuses and sample surveys the National Statistical Office is currently conducting and planning to conduct over the next five years. Please also list the registers, other administrative data sources, any non-traditional data sources (such as global positioning data, earth observation data, transaction data, mobile phone data, etc.), and data integration techniques the NSO is using in its statistical production processes."
+            }
+          ]
+        },
+
+        {
+          "type": "panel",
+          "name": "quality_assurance",
+          "title": "Quality assurance",
+          "elements": [
+            {
+              "type": "comment",
+              "name": "quality_assurance_q1",
+              "title": "Please describe the quality assurance policy and instruments the National Statistical Office is using. This may include a quality assurance framework; using GSBPM (Generic Statistical Business Process Model) checklists and quality indicators for the design of statistical business processes; validation procedures at data capture; editing and imputation procedures at data processing; and producing, and possibly publishing, producer-oriented and user-oriented quality reports."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
