@@ -57,6 +57,30 @@
               "title": "What mechanism(s) is/are in place to ensure that the official statistics produced throughout the national statistical system continuously meet the evolving needs of all possible users, including State agencies, the public, businesses, researchers and the media?"
             }
           ]
+        },
+        {
+          "type": "panel",
+          "name": "data_sources",
+          "title": "Data sources",
+          "elements": [
+            {
+              "type": "comment",
+              "name": "data_sources_q1",
+              "title": "Please list the censuses and sample surveys the national statistical system is currently conducting and planning to conduct over the next five years. Please also list the registers, other administrative data sources, any non-traditional data sources (such as global positioning data, earth observation data, transaction data, mobile phone data, etc.), and data integration techniques used in statistical production processes."
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "quality_assurance",
+          "title": "Quality assurance",
+          "elements": [
+            {
+              "type": "comment",
+              "name": "quality_assurance_q1",
+              "title": "Please describe the quality assurance policy and instruments the national statistical system is using. This may include a quality assurance framework; using GSBPM (Generic Statistical Business Process Model) checklists and quality indicators for the design of statistical business processes; validation procedures at data capture; editing and imputation procedures at data processing; and producing, and possibly publishing, producer-oriented and user-oriented quality reports."
+            }
+          ]
         }
       ]
     }
