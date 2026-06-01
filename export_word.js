@@ -47,7 +47,7 @@ const doc = new Document({
     {
       children: [
         new Paragraph({
-          text: "Global Assessment – Consolidated Review",
+          text: "Review of the national statistical system – Self-assessment questionnaire",
           heading: HeadingLevel.TITLE,
         }),
 
@@ -58,7 +58,7 @@ const doc = new Document({
 
         // Contributors
         new Paragraph({
-          text: "Contributors",
+          text: "Primay contact / focal point",
           heading: HeadingLevel.HEADING_2,
         }),
 
@@ -70,29 +70,51 @@ const doc = new Document({
         // PART 1
         // -------------------------
         new Paragraph({
-          text: "Part 1 – Institutional Issues",
+          text: "Part 1 – Legal framework, professional independence and statistical confidentiality",
           heading: HeadingLevel.HEADING_1,
         }),
 
         new Paragraph({
-          text: "Legal framework and professional independence",
+          text: "Legal framework",
           heading: HeadingLevel.HEADING_2,
         }),
 
-        new Paragraph("Main legislation:"),
-        ...renderResponses(data.part1?.legislation_overview),
+        new Paragraph("Legal framework:"),
+        ...renderResponses(data.part1?.legal_basis),
 
-        new Paragraph("Professional independence:"),
+        new Paragraph("Legal framework:"),
+        ...renderResponses(data.part1?.ssa),
+        
+        new Paragraph({
+          text: "Professional independence",
+          heading: HeadingLevel.HEADING_2,
+        }),
+        
+        new Paragraph("Procedures for appointment and dismissal:"),
         ...renderResponses(data.part1?.independence_appointment_dismissal),
 
-        new Paragraph("Methodological autonomy:"),
+        new Paragraph("Freedom from interference:"),
+        ...renderResponses(data.part1?.independence_freedom_from_interference),
+
+        new Paragraph("Statistical methodologies and data sources:"),
         ...renderResponses(data.part1?.methodology_and_sources),
 
         new Paragraph("Budget autonomy:"),
         ...renderResponses(data.part1?.budget_autonomy),
 
-        new Paragraph("Changes since last assessment:"),
-        ...renderResponses(data.part1?.changes_since_last_ga),
+        new Paragraph("Areas for improvement:"),
+        ...renderResponses(data.part1?.areas_for_improvement),
+
+        new Paragraph("Support needed:"),
+        ...renderResponses(data.part1?.support_needed),
+
+        new Paragraph({
+          text: "Safeguarding statistical confidentiality",
+          heading: HeadingLevel.HEADING_2,
+        }),
+        
+        new Paragraph("Procedures for appointment and dismissal:"),
+        ...renderResponses(data.part1?.statistical_confidentiality),
 
         new Paragraph("Areas for improvement:"),
         ...renderResponses(data.part1?.areas_for_improvement),
