@@ -62,7 +62,7 @@ export default function App() {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({})  // 🔥 force overwrite backend data
+      body: JSON.stringify({}), // 🔥 force overwrite backend data
     }).then(() => {
       // ✅ load clean state AFTER reset
       survey.data = {};
@@ -83,26 +83,17 @@ export default function App() {
     });
   });
 
+  const handleExport = () => {
+    window.location.href = `${API_URL}/export-word`;
+  };
+
   return (
     <div style={{ maxWidth: "900px", margin: "40px auto" }}>
       {/* ✅ Download button */}
       <div style={{ marginBottom: "20px" }}>
-        <button
-          onClick={async () => {
-            await fetch(`${API_URL}/export-word`);
-            alert("Export completed");
-          }}
-          style={{
-            backgroundColor: "#5B92E5",
-            color: "white",
-            padding: "10px 16px",
-            border: "none",
-            borderRadius: "6px",
-            cursor: "pointer",
-          }}
-        >
-          Download Word report
-        </button>
+<button onClick={handleExport}>
+  Download Word report
+</button>
       </div>
 
       {/* ✅ Survey */}
