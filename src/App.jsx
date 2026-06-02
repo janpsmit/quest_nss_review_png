@@ -53,47 +53,25 @@ export default function App() {
     return "filled";
   };
 
-  const API_URL = "http://localhost:3001";
-
-  // ✅ Load shared data
-  useEffect(() => {
-    fetch(`${API_URL}/save`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({}), // 🔥 force overwrite backend data
-    }).then(() => {
-      // ✅ load clean state AFTER reset
-      survey.data = {};
-    });
-  }, []);
-
-  // ✅ Save + update status
-  survey.onValueChanged.add((sender, options) => {
-    // ✅ save to backend
-    fetch(`${API_URL}/save`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        [options.name]: options.value,
-      }),
-    });
-  });
-
   const handleExport = () => {
-    window.location.href = `${API_URL}/export-word`;
+    const text = JSON.stringify(survey.data, null, 2);
+
+    const blob = new Blob([text], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "survey_output.json";
+    a.click();
+
+    URL.revokeObjectURL(url);
   };
 
   return (
     <div style={{ maxWidth: "900px", margin: "40px auto" }}>
       {/* ✅ Download button */}
       <div style={{ marginBottom: "20px" }}>
-<button onClick={handleExport}>
-  Download Word report
-</button>
+        <button onClick={handleExport}>Download Word report</button>
       </div>
 
       {/* ✅ Survey */}
