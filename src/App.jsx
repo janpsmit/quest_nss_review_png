@@ -53,7 +53,7 @@ export default function App() {
     return "filled";
   };
 
-  const API_URL = "https://png-nss-review-self-assessment.onrender.com";
+  const API_URL = "http://localhost:3001";
 
   // ✅ Load shared data
   useEffect(() => {
