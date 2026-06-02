@@ -11,6 +11,8 @@ import subjectAreas from "./survey/part4_subject_areas.json";
 import supportDocuments from "./survey/part5_supporting_documents.json";
 
 export default function App() {
+  const API_URL = "https://png-nss-review-self-assessment.onrender.com";
+  
   const survey = new Model({
     title:
       "Review of the national statistical system of Papua New Guinea – Self-assessment questionnaire",
@@ -54,18 +56,26 @@ export default function App() {
   };
 
   const handleExport = () => {
-    const text = JSON.stringify(survey.data, null, 2);
-
-    const blob = new Blob([text], { type: "application/json" });
-    const url = URL.createObjectURL(blob);
-
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = "survey_output.json";
-    a.click();
-
-    URL.revokeObjectURL(url);
+    window.location.href = `${API_URL}/export-word`;
   };
+
+  useEffect(() => {
+    fetch(`${API_URL}/load`)
+      .then((res) => res.json())
+      .then((data) => {
+        survey.data = data;
+      });
+  }, []);
+
+  survey.onValueChanged.add(() => {
+    fetch(`${API_URL}/save`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(survey.data),
+    });
+  });
 
   return (
     <div style={{ maxWidth: "900px", margin: "40px auto" }}>
