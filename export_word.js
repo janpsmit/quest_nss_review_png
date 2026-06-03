@@ -1,3 +1,11 @@
+import {
+  Document,
+  Packer,
+  Paragraph,
+  HeadingLevel,
+  TextRun,
+} from "docx";
+
 // helpers
 
 const renderField = (label, value) => {
