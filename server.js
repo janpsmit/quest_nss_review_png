@@ -13,16 +13,13 @@ import {
   PageNumber,
 } from "docx";
 
-
 const renderField = (label, value) => {
   return [
     new Paragraph({
-      children: [
-        new TextRun({ text: label, bold: true })
-      ]
+      children: [new TextRun({ text: label, bold: true })],
     }),
     new Paragraph(value || "—"),
-    new Paragraph("")
+    new Paragraph(""),
   ];
 };
 
@@ -33,7 +30,6 @@ app.use(express.json());
 
 const DATA_FILE = "data/shared_survey.json";
 
-
 // ✅ LOAD
 app.get("/load", (req, res) => {
   try {
@@ -43,30 +39,23 @@ app.get("/load", (req, res) => {
 
     const data = JSON.parse(fs.readFileSync(DATA_FILE, "utf-8"));
     res.json(data);
-
   } catch (error) {
     console.error(error);
     res.json({});
   }
 });
 
-
 // ✅ SAVE
 app.post("/save", (req, res) => {
   try {
-    fs.writeFileSync(
-      DATA_FILE,
-      JSON.stringify(req.body, null, 2)
-    );
+    fs.writeFileSync(DATA_FILE, JSON.stringify(req.body, null, 2));
 
     res.json({ status: "ok" });
-
   } catch (error) {
     console.error(error);
     res.status(500).send("Save failed");
   }
 });
-
 
 // ✅ EXPORT WORD
 app.get("/export-word", async (req, res) => {
@@ -86,10 +75,9 @@ app.get("/export-word", async (req, res) => {
                 new Paragraph({
                   alignment: AlignmentType.CENTER,
                   children: [
-                    new TextRun("Page "),
-                    PageNumber.CURRENT,
-                    new TextRun(" of "),
-                    PageNumber.TOTAL_PAGES,
+                    new TextRun({
+                      children: ["Page ", PageNumber.CURRENT],
+                    }),
                   ],
                 }),
               ],
@@ -108,7 +96,6 @@ app.get("/export-word", async (req, res) => {
     });
 
     res.send(buffer);
-
   } catch (error) {
     console.error(error);
     res.status(500).send("Error generating document");
