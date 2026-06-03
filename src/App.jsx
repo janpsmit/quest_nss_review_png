@@ -12,7 +12,7 @@ import supportDocuments from "./survey/part5_supporting_documents.json";
 
 export default function App() {
   const API_URL = "https://png-nss-review-self-assessment.onrender.com";
-  
+
   const survey = new Model({
     title:
       "Review of the national statistical system of Papua New Guinea – Self-assessment questionnaire",
@@ -60,22 +60,32 @@ export default function App() {
   };
 
   useEffect(() => {
+    // ✅ Load existing data
     fetch(`${API_URL}/load`)
       .then((res) => res.json())
       .then((data) => {
         survey.data = data;
       });
-  }, []);
 
-  survey.onValueChanged.add(() => {
-    fetch(`${API_URL}/save`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(survey.data),
-    });
-  });
+    // ✅ Save on change (only once!)
+    const saveHandler = () => {
+      fetch(`${API_URL}/save`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(survey.data),
+      });
+    };
+
+    survey.onValueChanged.add(saveHandler);
+
+    // ✅ Cleanup (very important)
+    return () => {
+      survey.onValueChanged.remove(saveHandler);
+    };
+
+  }, []);
 
   return (
     <div style={{ maxWidth: "900px", margin: "40px auto" }}>
