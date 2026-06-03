@@ -115,6 +115,27 @@ export const buildDocumentContent = (data) => {
     new Paragraph(""),
 
     // -------------------------
+    // CONTRIBUTOR INFORMATION
+    // -------------------------
+
+    new Paragraph({
+      text: "Primary contact / focal point",
+      heading: HeadingLevel.HEADING_1,
+    }),
+
+    new Paragraph(""),
+
+    ...renderField("Name:", data.contributor_name),
+
+    ...renderField("Organization / unit:", data.contributor_organization),
+
+    ...renderField("Position / role:", data.contributor_position),
+
+    ...renderField("Email address:", data.contributor_email),
+
+    new Paragraph(""),
+
+    // -------------------------
     // PART 1
     // -------------------------
 
