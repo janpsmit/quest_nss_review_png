@@ -58,6 +58,7 @@ app.post("/save", (req, res) => {
 });
 
 // ✅ EXPORT WORD
+// ✅ EXPORT WORD
 app.get("/export-word", async (req, res) => {
   try {
     const data = fs.existsSync(DATA_FILE)
@@ -65,24 +66,20 @@ app.get("/export-word", async (req, res) => {
       : {};
 
     const doc = new Document({
+      // ✅ Global font (modern look)
+      styles: {
+        default: {
+          document: {
+            run: {
+              font: "Calibri",
+            },
+          },
+        },
+      },
+
       sections: [
         {
           children: buildDocumentContent(data),
-
-          footers: {
-            default: new Footer({
-              children: [
-                new Paragraph({
-                  alignment: AlignmentType.CENTER,
-                  children: [
-                    new TextRun({
-                      children: ["Page ", PageNumber.CURRENT],
-                    }),
-                  ],
-                }),
-              ],
-            }),
-          },
         },
       ],
     });
@@ -92,10 +89,11 @@ app.get("/export-word", async (req, res) => {
     res.set({
       "Content-Type":
         "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-      "Content-Disposition": "attachment; filename=report.docx",
+      "Content-Disposition": "attachment; filename=png_nss_self_assessment_report.docx",
     });
 
     res.send(buffer);
+
   } catch (error) {
     console.error(error);
     res.status(500).send("Error generating document");
