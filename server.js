@@ -1,3 +1,4 @@
+import { buildDocumentContent } from "./export_word.js";
 import cors from "cors";
 import express from "express";
 import fs from "fs";
@@ -6,6 +7,7 @@ import {
   Packer,
   Paragraph,
   HeadingLevel,
+  TextRun,
 } from "docx";
 
 const renderField = (label, value) => {
@@ -72,45 +74,26 @@ app.get("/export-word", async (req, res) => {
     const doc = new Document({
       sections: [
         {
-          children: [
-            new Paragraph({
-              text: "NSS Self-Assessment",
-              heading: HeadingLevel.HEADING_1,
-            }),
-            new Paragraph(""),
-            new Paragraph("Primary contact:"),
-            new Paragraph(data.contributor_name || "—"),
-            new Paragraph(""),
-            new Paragraph({
-              text: "Part 1 – Legal framework",
-              heading: HeadingLevel.HEADING_2,
-            }),
-            new Paragraph(JSON.stringify(data.part1 || {}, null, 2)),
-          ],
+          children: buildDocumentContent(data)
         },
       ],
     });
 
     const buffer = await Packer.toBuffer(doc);
 
-    res.setHeader(
-      "Content-Type",
-      "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
-    );
-    res.setHeader(
-      "Content-Disposition",
-      "attachment; filename=report.docx"
-    );
-    res.setHeader("Content-Length", buffer.length);
+    res.set({
+      "Content-Type":
+        "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "Content-Disposition": "attachment; filename=png_nss_self_assessment_report.docx",
+    });
 
-    res.end(buffer);
+    res.send(buffer);
 
   } catch (error) {
     console.error(error);
     res.status(500).send("Error generating document");
   }
 });
-
 
 const PORT = process.env.PORT || 3001;
 
