@@ -49,12 +49,12 @@
             },
             {
               "type": "comment",
-              "name": "areas_for_improvement",
+              "name": "professional_independence_areas_for_improvement",
               "title": "What do you think needs to be improved in the area of professional independence?"
             },
             {
               "type": "comment",
-              "name": "support_needed",
+              "name": "professional_independence_support_needed",
               "title": "What support do you need from international organizations in the area of professional independence?"
             }
           ]
@@ -76,7 +76,7 @@
             },
             {
               "type": "comment",
-              "name": "support_needed",
+              "name": "statistical_confidentiality_support_needed",
               "title": "What support do you need from international organizations in the area of safeguarding statistical confidentiality?"
             }
           ]
