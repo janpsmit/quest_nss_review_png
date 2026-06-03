@@ -8,7 +8,32 @@ import {
   Paragraph,
   HeadingLevel,
   TextRun,
+  Footer,
+  AlignmentType,
+  PageNumber,
 } from "docx";
+
+const doc = new Document({
+  sections: [
+    {
+      children: buildDocumentContent(data),
+
+      footers: {   // ✅ HERE
+        default: new Footer({
+          children: [
+            new Paragraph({
+              alignment: AlignmentType.CENTER,
+              children: [
+                new TextRun("Page "),
+                PageNumber.CURRENT,
+              ],
+            }),
+          ],
+        }),
+      },
+    },
+  ],
+});
 
 const renderField = (label, value) => {
   return [

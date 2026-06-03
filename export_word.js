@@ -3,7 +3,10 @@ import {
   Packer,
   Paragraph,
   HeadingLevel,
-  TextRun,
+  TextRun, 
+  Footer,
+  AlignmentType,
+  PageNumber,
 } from "docx";
 
 // helpers
