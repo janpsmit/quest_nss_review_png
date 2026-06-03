@@ -89,7 +89,7 @@ app.get("/export-word", async (req, res) => {
     res.set({
       "Content-Type":
         "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-      "Content-Disposition": "attachment; filename=png_nss_self_assessment_report.docx",
+      "Content-Disposition": "attachment; filename=ZZZ_TEST_DOWNLOAD.docx",
     });
 
     res.send(buffer);
