@@ -58,7 +58,6 @@ app.post("/save", (req, res) => {
 });
 
 // ✅ EXPORT WORD
-// ✅ EXPORT WORD
 app.get("/export-word", async (req, res) => {
   try {
     const data = fs.existsSync(DATA_FILE)
@@ -66,7 +65,6 @@ app.get("/export-word", async (req, res) => {
       : {};
 
     const doc = new Document({
-      // ✅ Global font (modern look)
       styles: {
         default: {
           document: {
@@ -76,7 +74,6 @@ app.get("/export-word", async (req, res) => {
           },
         },
       },
-
       sections: [
         {
           children: buildDocumentContent(data),
@@ -89,7 +86,7 @@ app.get("/export-word", async (req, res) => {
     res.set({
       "Content-Type":
         "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-      "Content-Disposition": "attachment; filename=ZZZ_TEST_DOWNLOAD.docx",
+      "Content-Disposition": "attachment; filename=png_nss_self_assessment_report.docx",
     });
 
     res.send(buffer);
