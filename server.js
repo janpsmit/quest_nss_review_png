@@ -13,27 +13,6 @@ import {
   PageNumber,
 } from "docx";
 
-const doc = new Document({
-  sections: [
-    {
-      children: buildDocumentContent(data),
-
-      footers: {   // ✅ HERE
-        default: new Footer({
-          children: [
-            new Paragraph({
-              alignment: AlignmentType.CENTER,
-              children: [
-                new TextRun("Page "),
-                PageNumber.CURRENT,
-              ],
-            }),
-          ],
-        }),
-      },
-    },
-  ],
-});
 
 const renderField = (label, value) => {
   return [
@@ -99,7 +78,23 @@ app.get("/export-word", async (req, res) => {
     const doc = new Document({
       sections: [
         {
-          children: buildDocumentContent(data)
+          children: buildDocumentContent(data),
+
+          footers: {
+            default: new Footer({
+              children: [
+                new Paragraph({
+                  alignment: AlignmentType.CENTER,
+                  children: [
+                    new TextRun("Page "),
+                    PageNumber.CURRENT,
+                    new TextRun(" of "),
+                    PageNumber.TOTAL_PAGES,
+                  ],
+                }),
+              ],
+            }),
+          },
         },
       ],
     });
@@ -109,7 +104,7 @@ app.get("/export-word", async (req, res) => {
     res.set({
       "Content-Type":
         "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-      "Content-Disposition": "attachment; filename=png_nss_self_assessment_report.docx",
+      "Content-Disposition": "attachment; filename=report.docx",
     });
 
     res.send(buffer);
